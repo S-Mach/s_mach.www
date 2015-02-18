@@ -21,21 +21,64 @@
     .navbar-logo-container {
         margin-left: 5%;
     }
-
 }
 
-@media (max-width: 768px) {
+/* LG */
+@media (min-width: 1199px) {
+    .navbar-item {
+        margin-top: 35px;
+        float: right ! important;
+    }
+}
+
+/* [SM,LG) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .navbar {
+        position: absolute;
+        width: 550px;
+        left: 25%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .navbar-logo-container {
+        margin-left: 5%;
+    }
+    .navbar-social {
+        margin-top: 35px;
+        float: right ! important;
+    }
+    .navbar-separator {
+        float: right ! important;
+    }
+}
+
+/* XS */
+@media (max-width: 767px) {
     .navbar-social-button {
         border: 0;
         margin: 0.75em 0.25em 1em 0.2em;
         /* Font-size is adjusted to make icon look correct size [320,768] */
         font-size: 125%;
+        float: right ! important;
     }
+    /* Ensure separator appears right of social button */
+    .navbar-social-separator {
+        margin-top: 20px;
+        float: right ! important;
+    }
+
     .navbar-links-button {
         border: 0;
         margin: 0.75em 0.2em 1em 0.25em;
         /* Font-size is adjusted to make icon look correct size [320,768] */
         font-size: 125%;
+        float: left ! important;
+    }
+    /* Ensure separator appears left of links button */
+    .navbar-links-separator {
+        margin-top: 20px;
+        float: left ! important;
     }
 
     /* Center the logo and make the width shrink as viewport shrinks */
