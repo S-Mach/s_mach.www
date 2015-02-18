@@ -1,0 +1,44 @@
+
+.navbar-default {
+    font-family: "Open Sans";
+    font-weight: normal;
+    font-size: 12pt;
+    color: #444443;
+    background-color: #ffffff;
+    border-color: transparent;
+    text-align: center;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #444443;
+}
+
+.navbar-social {
+    float: right ! important
+}
+
+.navbar-links {
+    float: left ! important
+}
+
+.navbar-logo {
+    margin-left: 150px;
+}
+
+@media (min-width: 768px) {
+    .navbar-links {
+        float: right ! important
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-logo
+    {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        text-align: center;
+        margin: auto;
+    }
+}
+

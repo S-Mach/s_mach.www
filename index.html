@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S-Mach Scala Internships</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/screen.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Based on http://jsfiddle.net/4Cc3p/1/ (http://stackoverflow.com/questions/18821238/multiple-collapse-buttons-in-navbar-with-bootstrap-3-0) -->
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <!-- Note: z-order matters here! -->
+    <a class="navbar-logo" href="#">
+      <img src="images/s_mach-logo.png" class="img-responsive" style="display: inline; margin-top: 2px; height: 50px"/>
+      <span class="sr-only">S-Mach</span>
+    </a>
+    <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#links">
+      <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+      <span class="sr-only">Toggle links</span>
+    </button>
+    <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#social">
+      <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+      <span class="sr-only">Toggle social</span>
+    </button>
+  </div>
+  <ul class="collapse navbar-collapse nav navbar-nav navbar-social" id="social">
+    <li class="social"><a href="#"><img src="images/icon-email.png" class="img-responsive" style="height:15px;margin-top:3px"/><span class="sr-only">Email</span></a></li>
+    <li class="social"><a href="#"><img src="images/icon-phone.png" class="img-responsive" style="height:23px"/><span class="sr-only">Telephone</span></a></li>
+    <li class="social"><a href="#"><img src="images/icon-github.png" class="img-responsive" style="height:20px"/><span class="sr-only">Github</span></a></li>
+  </ul>
+  <img class="hidden-xs navbar-nav navbar-links img-responsive" src="images/separator.png" style="margin-top:10px"/>
+  <ul class="collapse navbar-collapse nav navbar-nav navbar-links" id="links">
+    <li>
+        <a href="#">How's it work?</a>
+    </li>
+    <li>
+      <a href="#">For Interns</a>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        Other services<b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="#">Training</a>
+        </li>
+        <li>
+          <a href="#">Consulting</a>
+        </li>
+        <li>
+          <a href="#">Open source</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Blog</a>
+    </li>
+    <li>
+      <a href="#">About us</a>
+    </li>
+    <!--<li class="visible-lg">-->
+      <!--<img src="images/separator.png" class="img-responsive"/>-->
+    <!--</li>-->
+  </ul>
+</nav>
+
+<!--<nav class="navbar navbar-default" role="navigation">-->
+  <!--<ul class="collapse navbar-collapse nav navbar-nav" id="links">-->
+    <!--<li>-->
+        <!--<a href="#">How's it work?</a>-->
+    <!--</li>-->
+    <!--<li>-->
+      <!--<a href="#">For Interns</a>-->
+    <!--</li>-->
+    <!--<li class="dropdown">-->
+      <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Other services<b class="caret"></b></a>-->
+      <!--<ul class="dropdown-menu">-->
+        <!--<li>-->
+          <!--<a href="#">Training</a>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<a href="#">Consulting</a>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<a href="#">Open source</a>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</li>-->
+  <!--</ul>-->
+  <!--<div class="navbar-header">-->
+    <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#links">-->
+      <!--<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>-->
+      <!--<span class="sr-only">Toggle links</span>-->
+    <!--</button>-->
+    <!--<img src="images/s_mach-logo.png" class="img-responsive" style="height: 50px"/>-->
+    <!--<a class="navbar-brand" href="#"><span class="sr-only">S-Mach</span></a>-->
+    <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#social">-->
+      <!--<span class="glyphicon glyphicon-send" aria-hidden="true"></span>-->
+      <!--<span class="sr-only">Toggle social</span>-->
+    <!--</button>-->
+  <!--</div>-->
+  <!--<ul class="collapse navbar-collapse nav navbar-nav" id="social">-->
+    <!--<li class="social"><a href="#"><img src="images/icon-email.png" class="img-responsive" style="height:15px;margin-top:3px"/><span class="sr-only">Email</span></a></li>-->
+    <!--<li class="social"><a href="#"><img src="images/icon-phone.png" class="img-responsive" style="height:20px"/><span class="sr-only">Telephone</span></a></li>-->
+    <!--<li class="social"><a href="#"><img src="images/icon-github.png" class="img-responsive" style="height:20px"/><span class="sr-only">Github</span></a></li>-->
+  <!--</ul>-->
+<!--</nav>-->
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
