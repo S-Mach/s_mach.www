@@ -28,7 +28,8 @@
     /* Make logo image responsive */
     max-width: 100%;
     height: auto;
-    /* But leave off display: block which causes h-centering issues */
+    /* But leave off display: block which causes horiz centering issues for logo
+    [400,767]*/
 }
 
 @media (max-width: 768px) {
