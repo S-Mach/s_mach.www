@@ -11,7 +11,7 @@
 
 <!-- Based on http://jsfiddle.net/4Cc3p/1/ (http://stackoverflow.com/questions/18821238/multiple-collapse-buttons-in-navbar-with-bootstrap-3-0) -->
 <nav class="navbar navbar-default" role="navigation">
-  <div class="navbar-header">
+  <div class="navbar-item navbar-header">
     <!-- Note: z-order matters here! -->
     <a class="navbar-logo-container" href="#">
       <img src="images/s_mach-logo.png" class="navbar-logo"/>
@@ -21,20 +21,20 @@
       <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
       <span class="sr-only">Toggle links</span>
     </button>
-    <img class="navbar-separator pull-left" src="images/separator.png"/>
+    <img class="visible-xs navbar-separator pull-left" src="images/separator.png"/>
     <button type="button" class="navbar-toggle pull-right navbar-social-button" data-toggle="collapse" data-target="#social">
       <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
       <span class="sr-only">Toggle social</span>
     </button>
-    <img class="navbar-separator pull-right" src="images/separator.png"/>
+    <img class="visible-xs navbar-separator pull-right" src="images/separator.png"/>
   </div>
-  <ul class="collapse navbar-collapse nav navbar-nav navbar-social" id="social">
+  <ul class="navbar-item collapse navbar-collapse nav navbar-nav navbar-social" id="social">
     <li class="social"><a href="#"><img src="images/icon-email.png" class="img-responsive" style="height:15px;margin-top:3px"/><span class="sr-only">Email</span></a></li>
     <li class="social"><a href="#"><img src="images/icon-phone.png" class="img-responsive" style="height:23px"/><span class="sr-only">Telephone</span></a></li>
     <li class="social"><a href="#"><img src="images/icon-github.png" class="img-responsive" style="height:20px"/><span class="sr-only">Github</span></a></li>
   </ul>
   <img class="hidden-xs navbar-nav navbar-links img-responsive" src="images/separator.png" style="margin-top:10px"/>
-  <ul class="collapse navbar-collapse nav navbar-nav navbar-links" id="links">
+  <ul class="navbar-item collapse navbar-collapse nav navbar-nav navbar-links" id="links">
     <li>
         <a href="#">How's it work?</a>
     </li>

@@ -13,52 +13,54 @@
     color: #444443;
 }
 
-.navbar-social {
-    float: right ! important
-}
-
-.navbar-links {
-    float: left ! important
-}
-
-.navbar-logo-container {
-    margin-left: 5%;
-}
-
-.navbar-social-button {
-    border: 0;
-    margin: 0.75em 0.25em 1em 0.2em;
-    font-size: 125%
-}
-.navbar-links-button {
-    border: 0;
-    margin: 0.75em 0.2em 1em 0.25em;
-    font-size: 125%
-}
-
 .navbar-separator {
     margin: 1.25em 0 0 0;
 }
 
 @media (min-width: 768px) {
-    .navbar-links {
-        float: right ! important
+    .navbar-logo-container {
+        margin-left: 5%;
     }
+
 }
 
 .navbar-logo {
+    /* Make logo image responsive */
     max-width: 100%;
     height: auto;
+    /* But leave off display: block which causes h-centering issues */
 }
 
 @media (max-width: 768px) {
+    .navbar-social-button {
+        border: 0;
+        margin: 0.75em 0.25em 1em 0.2em;
+        /* Font-size is adjusted to make icon look correct size [320,768] */
+        font-size: 125%;
+    }
+    .navbar-links-button {
+        border: 0;
+        margin: 0.75em 0.2em 1em 0.25em;
+        /* Font-size is adjusted to make icon look correct size [320,768] */
+        font-size: 125%;
+    }
 
+    /* Center the logo and make the width shrink as viewport shrinks */
     .navbar-logo-container {
         position: absolute;
         width: 66%;
         left: 16%;
         text-align: center;
         margin: auto;
+    }
+
+    /* Make the dropdown menu align left for links */
+    .navbar-links {
+        float: left ! important
+    }
+    /* Make the dropdown menu align right for social icons */
+    .navbar-social {
+        float: right ! important
     }
 }
 
