@@ -24,14 +24,6 @@
 
 }
 
-.navbar-logo {
-    /* Make logo image responsive */
-    max-width: 100%;
-    height: auto;
-    /* But leave off display: block which causes horiz centering issues for logo
-    [400,767]*/
-}
-
 @media (max-width: 768px) {
     .navbar-social-button {
         border: 0;
@@ -53,6 +45,14 @@
         left: 16%;
         text-align: center;
         margin: auto;
+    }
+
+    .navbar-logo {
+        /* Make logo image responsive */
+        max-width: 100%;
+        height: auto;
+        /* But leave off display: block which causes horiz centering issues for logo
+        [400,767]*/
     }
 
     /* Make the dropdown menu align left for links */
