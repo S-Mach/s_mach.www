@@ -25,6 +25,21 @@
     margin-left: 150px;
 }
 
+.navbar-social-button {
+    border: 0;
+    margin: 0.75em 0.25em 1em 0.2em;
+    font-size: 125%
+}
+.navbar-links-button {
+    border: 0;
+    margin: 0.75em 0.2em 1em 0.25em;
+    font-size: 125%
+}
+
+.navbar-separator {
+    margin: 1.25em 0 0 0;
+}
+
 @media (min-width: 768px) {
     .navbar-links {
         float: right ! important
@@ -35,8 +50,8 @@
     .navbar-logo
     {
         position: absolute;
-        width: 100%;
-        left: 0;
+        width: 66%;
+        left: 16%;
         text-align: center;
         margin: auto;
     }
