@@ -239,6 +239,12 @@ img#sketch-place {
 div#container-why-scala {
   /* Center in strip */
   margin: 0 auto 0 auto;
+  text-align: center;
+}
+
+div#col-why-scala {
+  max-width: 390px;
+  margin: 0 auto 0 auto;
 }
 
 p#title-why-scala {
@@ -263,6 +269,87 @@ p#explain-why-scala {
   line-height: 1.5;
 }
 
+img#sketch-why-scala {
+  margin: 0 auto 0 auto;
+}
+
+/************************ Strip-Build-Your-Scala-Team **************************/
+
+div#strip-build-your-scala-team {
+  position: relative;
+}
+
+div#container-build-your-scala-team {
+  /* Center in strip */
+  margin: 0 auto 0 auto;
+  text-align: center;
+}
+
+img#sketch-choose-the-best {
+  /* Position so that arm is always coming from off screen for all viewport
+  widths */
+  position: absolute;
+  left: 0;
+  padding-right: 20px;
+  /* Hack-adjust top position of choose-the-best sketch to keep it inside its
+  strip as it responsively resizes */
+  top: 55%;
+}
+
+@media screen and (min-width: 400px) {
+  img#sketch-choose-the-best {
+    top:45%;
+  }
+}
+
+@media screen and (min-width: 525px) {
+  img#sketch-choose-the-best {
+    top:35%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  img#sketch-choose-the-best {
+    top:30%;
+  }
+}
+
+div#col-choose-the-best {
+  text-align: center;
+}
+
+div#col-build-your-scala-team {
+  max-width: 390px;
+  margin: 0 auto 0 auto;
+}
+
+p#title-build-your-scala-team {
+  font-size: 16pt;
+  font-weight: bold;
+  letter-spacing: 0.085em;
+  color: #ffffff;
+}
+
+p#summary-build-your-scala-team {
+  font-size: 24pt;
+  letter-spacing: 0.065em;
+  font-weight: 400;
+}
+
+img#divider-build-your-scala-team {
+  text-align: left;
+  display: inline-block;
+  padding: 10px 0 15px 0;
+}
+
+p#explain-build-your-scala-team {
+  font-size: 14pt;
+  line-height: 1.5;
+}
+
+div#button-learn-more {
+  margin: 0 auto 0 auto;
+}
 
 /******************************* Extra Small **********************************/
 
@@ -380,9 +467,8 @@ p#explain-why-scala {
     padding-top: 10px;
   }
 
-  div#container-why-scala {
-    padding-top: 50px;
-    text-align: center;
+  img#sketch-choose-the-best {
+    top: 28%;
   }
 }
 
@@ -413,9 +499,18 @@ p#explain-why-scala {
     margin-left: 10%;
   }
 
-  div#container-why-scala {
-    padding-top: 100px;
+  div#strip-why-scala {
+    padding: 100px 0 100px 0;
   }
+
+  img#sketch-choose-the-best {
+    top: 0;
+  }
+
+  div#col-build-your-scala-team {
+    padding-top: 13%
+  }
+
 }
 
 

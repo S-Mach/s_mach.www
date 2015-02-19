@@ -21,6 +21,8 @@
  7) In strip-recruit-train-place: make [sm,md] smaller/tighter instead of single
  column stack. Make xs a carousel instead of single column stack
  8) Standardize bottom/top margin/padding/border to px, left/right to %
+ 9) Use tutorial here to make proper cleaved-circle-button CSS: http://line25.com/tutorials/how-to-build-a-simple-button-with-css-image-sprites
+ 10) Investigate weird artifact where height of strip-build-your-scala-team jumps by 50px between sm -> md transition. choose-the-best-blank.png resizes from 548 to 598 for no reason?
 -->
 <nav class="navbar navbar-default" role="navigation">
   <div class="navbar-header">
@@ -130,12 +132,32 @@
         </div>
       </div>
       <div class="col-lg-7">
-        <img class="img-responsive" src="images/why-scala.png"/>
+        <img id="sketch-why-scala" class="img-responsive" src="images/why-scala.png"/>
       </div>
     </div>
   </div>
 </div>
-<div class="strip-yellow" style="height:600px">
+<div id="strip-build-your-scala-team" class="strip-yellow">
+  <div id="container-build-your-scala-team" class="container">
+    <div class="row">
+      <div id="col-build-your-scala-team" class="col-lg-4 col-lg-push-8">
+        <p id="title-build-your-scala-team">Build your scala team!</p>
+        <p id="summary-build-your-scala-team"><b>Choose the best</b> to be the best</p>
+        <img id="divider-build-your-scala-team" src="images/horiz-divider.png"/>
+        <p id="explain-build-your-scala-team">Praescent accsan arcu vulutate tristique trsitique. Ut vel enim vitae felis congue efficitur quis ac magna. Curabitur malesuada quis lectus et ticidunt.</p>
+        <div id="button-learn-more" class="cleaved-circle-button">
+          Learn more
+          <img src="images/cleaved-circle-button.png"/>
+        </div>
+      </div>
+      <div id="col-choose-the-best" class="col-lg-8 col-lg-pull-4">
+        <img id="blank-choose-the-best" class="img-responsive" src="images/choose-the-best-blank.png"/>
+      </div>
+    </div>
+  </div>
+  <img id="sketch-choose-the-best" class="img-responsive" src="images/choose-the-best.png"/>
+</div>
+<div class="strip-white" style="height:600px">
 
 </div>
 <script src="js/jquery-1.11.2.min.js"></script>
