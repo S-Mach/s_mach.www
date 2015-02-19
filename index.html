@@ -18,6 +18,8 @@
  5) Modify navbar sm so that logo doesn't responsive resize instead use fixed
  sizes larger for [460,767] and smaller for [*,459]
  6) Modify media-queries to xs settings by default
+ 7) In strip-recruit-train-place: make [sm,md] smaller/tighter instead of single
+ column stack. Make xs a carousel instead of single column stack
 -->
 <nav class="navbar navbar-default" role="navigation">
   <div class="navbar-header">
@@ -74,49 +76,66 @@
     </li>
   </ul>
 </nav>
-<img id="strip-nav-shadow" class="yellow-strip" src="images/nav-shadow.png"/>
-<div id="strip-recruit-train-place" class="yellow-strip">
-  <img id="cloud-1" src="images/cloud-1.png"/>
-  <img id="cloud-2" src="images/cloud-2.png"/>
-  <img id="cloud-3" src="images/cloud-3.png"/>
-  <p style="text-align: center;font-size: 36pt">S-Mach Scala Internships</p>
+<img id="strip-nav-shadow" class="strip-yellow" src="images/nav-shadow.png"/>
+<div id="strip-recruit-train-place" class="strip-yellow">
+
   <div id="container-recruit-train-place" class="container">
+    <div id="container-title" class="row">
+      <div class="col-lg-12">
+        <p id="scala-internships"><b>Scala</b> Internships</p>
+        <img id="divider-title" src="images/horiz-divider.png"/>
+        <p id="summary-recruit-train-place">We recruit, train and place <b>Scala interns</b> for <b>Atlanta-area</b> companies</p>
+      </div>
+    </div>
     <div class="row">
-      <div class="col-lg-4">
+      <div id="col-recruit" class="col-lg-4">
+        <img id="cloud-1" src="images/cloud-1.png"/>
         <img class="sketch" src="images/recruit.png"/>
         <div class="ribbon">
           <img src="images/ribbon.png"/>
-          <p>Recruit</p>
+          <p><b>Recruit</b></p>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div id="col-train" class="col-lg-4">
         <img class="sketch" src="images/train.png"/>
         <div class="ribbon">
           <img src="images/ribbon.png"/>
-          <p>Train</p>
+          <p><b>Train</b></p>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div id="col-place" class="col-lg-4">
+        <img id="cloud-2" src="images/cloud-2.png"/>
+        <img id="cloud-3" src="images/cloud-3.png"/>
         <img id="sketch-place" class="sketch" src="images/place.png"/>
         <div class="ribbon">
           <img src="images/ribbon.png"/>
-          <p>Place</p>
+          <p><b>Place</b></p>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div id="strip-why-scala" class="white-strip">
-  <div class="container container-why-scala">
+<div id="strip-why-scala" class="strip-white">
+  <div id="container-why-scala" class="container">
     <div class="row">
-      <div class="col-lg-4">
-        <p>Why Scala</p>
+      <div id="col-why-scala" class="col-lg-4">
+        <p id="title-why-scala">Why Scala?</p>
+        <p>A bridge between <b>object-oriented and functional programming</b></p>
+        <img id="divider-why-scala" src="images/horiz-divider.png"/>
+        <p>Scala is a next generation Java VM programming language with significant career opportunities.</p>
+        <div>
+          More about scala
+          <img src="images/more-button.png"/>
+        </div>
       </div>
       <div class="col-lg-8">
         <img class="img-responsive" src="images/why-scala.png"/>
       </div>
     </div>
   </div>
+</div>
+<div class="strip-yellow" style="height:600px">
+
 </div>
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

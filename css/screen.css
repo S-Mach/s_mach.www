@@ -1,10 +1,46 @@
+/*********************************** Fonts ************************************/
+
 @font-face {
-  font-family: "OpenSans-Regular";
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: normal;
   src: url(../fonts/OpenSans-Regular.ttf)
 }
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: bold;
+  src: url(../fonts/OpenSans-Bold.ttf)
+}
+@font-face {
+  font-family: "OpenSans";
+  font-style: italic;
+  font-weight: normal;
+  src: url(../fonts/OpenSans-Italic.ttf)
+}
+/*
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 900;
+  src: url(../fonts/OpenSans-ExtraBold.ttf)
+}
+@font-face {
+  font-family: "OpenSans";
+  font-style: italic;
+  font-weight: bold;
+  src: url(../fonts/OpenSans-BoldItalic.ttf)
+}
+@font-face {
+  font-family: "OpenSans";
+  font-style: italic;
+  font-weight: bold;
+  src: url(../fonts/OpenSans-BoldItalic.ttf)
+}
+*/
 
 body {
-  font-family: "OpenSans-Regular";
+  font-family: "OpenSans";
   font-weight: normal;
   font-size: 12pt;
   /* Text color from logo (dark grey) */
@@ -13,6 +49,8 @@ body {
   /* Fixes weird artifact after nav-shadow */
   line-height: 1;
 }
+
+/*********************************** Navbar ***********************************/
 
 nav {
   /* Slightly larger font for navbar */
@@ -50,13 +88,13 @@ img#navbar-social-icon-github {
   height: 20px
 }
 
-.yellow-strip {
+.strip-yellow {
   /* Strips take up entire viewport width */
   width: 100%;
   background-color: #f9a71a;
 }
 
-.white-strip {
+.strip-white {
   /* Strips take up entire viewport width */
   width: 100%;
 }
@@ -66,49 +104,95 @@ img#strip-nav-shadow {
   height: 16px;
 }
 
-div#strip-recruit-train-place {
-  position:relative;
+/************************* Strip-Recruit-Train-Place **************************/
+
+div#container-recruit-train-place {
+  /* Top/bottom spacing */
+  padding: 24px 0 24px 0;
+  /* Center in strip */
+  margin: 0 auto 0 auto;
+}
+
+div#container-title {
+  /* Spacing between title and sketches*/
+  padding-bottom: 30px;
+}
+
+p#scala-internships {
+  text-align: center;
+  font-size: 36pt;
+}
+
+img#divider-title {
+  /* Center */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* Top/bottom spacing */
+  padding: 10px 0 20px 0;
+}
+
+p#summary-recruit-train-place {
+  text-align: center;
+  font-size: 18pt;
+}
+
+div#col-recruit {
+  /* Allow for absolute positioning of cloud */
+  position: relative;
+  /* Center within column */
+  margin-left: auto;
+  margin-right: auto;
+  /* Once columns are stacked, prevent width from growing to viewport width.
+     Otherwise, cloud position isn't stable */
+  max-width: 390px;
 }
 
 img#cloud-1 {
+  /* Position cloud just upper left of recruit sketch */
   position: absolute;
-  left: 50px;
-  top:35px;
+  left: -5%;
+  top: -5%;
+}
+
+div#col-place {
+  /* Allow for absolute positioning of clouds */
+  position: relative;
+  /* Center within column */
+  margin-left: auto;
+  margin-right: auto;
+  /* Once columns are stacked, prevent width from growing to viewport width.
+     Otherwise, clouds positions aren't stable */
+  max-width: 390px;
 }
 
 img#cloud-2 {
+  /* Position cloud just upper right of place sketch */
   position: absolute;
-  left: 1050px;
-  top: 70px;
+  left: 70%;
+  top: 0;
 }
 
 img#cloud-3 {
+  /* Position cloud just upper right of place sketch */
   position: absolute;
-  left: 1175px;
-  top: 30px;
-}
-
-div#container-recruit-train-place {
-  padding-top: 2em;
-  padding-bottom: 2em;
-  margin: 0 auto 0 auto;
-}
-
-div.container-why-scala {
-  padding-top: 2em;
-  padding-bottom: 2em;
-  margin: 0 auto 0 auto;
+  left: 90%;
+  top: -10%;
 }
 
 div.ribbon {
+  /* Allow ribbon text to be absolute positioned */
   position: relative;
+  /* Force width to be always exactly image width */
   width: 306px;
+  /* Center */
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 div.ribbon>p {
+  /* Position ribbon text to appear in center of ribbon */
   position: absolute;
   left: 120px;
   top: 18px;
@@ -116,14 +200,25 @@ div.ribbon>p {
 }
 
 img.sketch {
+  /* Center */
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 img#sketch-place {
-  margin-top: 39px;
+  /* Adjust place sketch (which is shorter) to align with recruit */
+  margin-top: 40px;
 }
+
+
+/****************************** Strip-Why-Scala *******************************/
+
+div.container-why-scala {
+  padding: 24px 0 24px 0;
+  margin: 0 auto 0 auto;
+}
+
 
 @media (min-width: 768px) {
   a#navbar-logo-anchor {
@@ -131,7 +226,8 @@ img#sketch-place {
   }
 }
 
-/* LG */
+/*********************************** Large ************************************/
+
 @media (min-width: 1199px) {
   ul#navbar-links {
     /* Vertically center links with logo */
@@ -158,7 +254,8 @@ img#sketch-place {
   }
 }
 
-/* [SM,LG) */
+/********************************* SM -> MD ***********************************/
+
 @media (min-width: 768px) and (max-width: 1199px) {
   /* Convert navbar to centered fixed width to stack logo-social on top of
   links */
@@ -191,7 +288,8 @@ img#sketch-place {
   }
 }
 
-/* XS */
+/******************************* Extra Small **********************************/
+
 @media (max-width: 767px) {
   nav.navbar {
     margin-bottom: 5px;
