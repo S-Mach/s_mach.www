@@ -14,32 +14,35 @@
  1) Some kind of hover effect on links
  2) Tweak positioning to match mock up
  3) Lower margin on social buttons
+ 4) Setting height: 10px on nav-shadow in sm to correct skew causes artifact
+ 5) Modify navbar sm so that logo doesn't responsive resize instead use fixed
+ sizes larger for [460,767] and smaller for [*,459]
 -->
 <nav class="navbar navbar-default" role="navigation">
   <div class="navbar-header">
     <!-- Note: z-order matters here! -->
-    <a class="navbar-logo-container" href="#">
-      <img src="images/s_mach-logo.png" class="navbar-logo"/>
+    <a id="navbar-logo-anchor" href="#">
+      <img id="navbar-logo" src="images/s_mach-logo.png"/>
       <span class="sr-only">S-Mach</span>
     </a>
-    <button type="button" class="navbar-toggle navbar-links-button" data-toggle="collapse" data-target="#links">
+    <button id="navbar-links-button" class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-links">
       <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
       <span class="sr-only">Toggle links</span>
     </button>
-    <img class="visible-xs navbar-links-separator" src="images/separator.png"/>
-    <button type="button" class="navbar-toggle navbar-social-button" data-toggle="collapse" data-target="#social">
+    <img id="navbar-links-separator" class="visible-xs" src="images/separator.png"/>
+    <button id="navbar-social-button" class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-social">
       <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
       <span class="sr-only">Toggle social</span>
     </button>
-    <img class="visible-xs navbar-social-separator" src="images/separator.png"/>
+    <img id="navbar-social-separator-xs" class="visible-xs" src="images/separator.png"/>
   </div>
-  <ul class="navbar-item collapse navbar-collapse nav navbar-nav navbar-social" id="social">
-    <li class="social"><a href="#"><img src="images/icon-email.png" class="img-responsive" style="height:15px;margin-top:3px"/><span class="sr-only">Email</span></a></li>
-    <li class="social"><a href="#"><img src="images/icon-phone.png" class="img-responsive" style="height:23px"/><span class="sr-only">Telephone</span></a></li>
-    <li class="social"><a href="#"><img src="images/icon-github.png" class="img-responsive" style="height:20px"/><span class="sr-only">Github</span></a></li>
+  <ul id="navbar-social" class="navbar-item collapse navbar-collapse nav navbar-nav">
+    <li><a href="#"><img id="navbar-social-icon-email" class="img-responsive" src="images/icon-email.png"/><span class="sr-only">Email</span></a></li>
+    <li><a href="#"><img id="navbar-social-icon-phone" class="img-responsive" src="images/icon-phone.png"/><span class="sr-only">Telephone</span></a></li>
+    <li><a href="#"><img id="navbar-social-icon-github"class="img-responsive" src="images/icon-github.png"/><span class="sr-only">Github</span></a></li>
   </ul>
-  <img class="hidden-xs navbar-social-separator" src="images/separator.png"/>
-  <ul class="navbar-item collapse navbar-collapse nav navbar-nav navbar-links" id="links">
+  <img id="navbar-social-separator" class="hidden-xs" src="images/separator.png"/>
+  <ul id="navbar-links" class="navbar-item collapse navbar-collapse nav navbar-nav">
     <li>
         <a class="active" href="#">How's it work?</a>
     </li>
@@ -70,7 +73,34 @@
     </li>
   </ul>
 </nav>
-
+<img id="strip-nav-shadow" class="strip" src="images/nav-shadow.png"/>
+<div class="strip strip-recruit-train-place">
+  <div class="container container-recruit-train-place">
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="img-responsive" src="images/recruit.png"/>
+      </div>
+      <div class="col-lg-4">
+        <img class="img-responsive" src="images/train.png"/>
+      </div>
+      <div class="col-lg-4">
+        <img class="img-responsive" src="images/place.png"/>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="strip strip-why-scala">
+  <div class="container container-why-scala">
+    <div class="row">
+      <div class="col-lg-4">
+        <p>Why Scala</p>
+      </div>
+      <div class="col-lg-8">
+        <img class="img-responsive" src="images/why-scala.png"/>
+      </div>
+    </div>
+  </div>
+</div>
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>

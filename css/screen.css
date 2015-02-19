@@ -1,142 +1,202 @@
 @font-face {
-    font-family: "OpenSans-Regular";
-    src: url(../fonts/OpenSans-Regular.ttf)
+  font-family: "OpenSans-Regular";
+  src: url(../fonts/OpenSans-Regular.ttf)
 }
 
-.navbar-default {
-    font-family: "OpenSans-Regular";
-    font-weight: normal;
-    font-size: 14pt;
-    color: #444443;
-    background-color: #ffffff;
-    border-color: transparent;
-}
-
-.navbar-default .navbar-nav>li>a {
-    color: #444443;
+body {
+  font-family: "OpenSans-Regular";
+  font-weight: normal;
+  font-size: 12pt;
+  /* Text color from logo (dark grey) */
+  color: #444443;
+  background-color: #ffffff;
+  /* Fixes weird artifact after nav-shadow */
+  line-height: 1;
 }
 
 nav {
-    padding-top: 10px;
+  /* Slightly larger font for navbar */
+  font-size: 14pt;
+  /* Add some spacing between logo and top of page */
+  padding-top: 10px;
 }
 
-.navbar-separator {
-    margin: 1.25em 0 0 0;
+nav.navbar-default {
+  /* Override bootstrap, just use underlying white background */
+  background-color: transparent;
+  /* Override bootstrap, turn off border for navbar */
+  border: none;
+}
+
+nav.navbar-default .navbar-nav>li>a {
+  /* Override bootstrap text color to match main color */
+  color: #444443;
+}
+
+img#navbar-social-icon-email {
+  /* Correct position issue */
+  margin-top: 3px;
+  /* Adjust height to blend with other social icons */
+  height: 15px;
+}
+
+img#navbar-social-icon-phone {
+  /* Adjust height to blend with other social icons */
+  height: 23px;
+}
+
+img#navbar-social-icon-github {
+  /* Adjust height to blend with other social icons */
+  height: 20px
+}
+
+.strip {
+  /* Strips take up entire viewport width */
+  width: 100%;
+}
+
+img#strip-nav-shadow {
+  /* Fix height to 16px (stretch is fine) */
+  height: 16px;
+}
+
+div.strip-recruit-train-place {
+  background-color: #f9a71a;
+}
+
+div.container-recruit-train-place {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin: 0 auto 0 auto;
+}
+
+div.container-why-scala {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin: 0 auto 0 auto;
 }
 
 @media (min-width: 768px) {
-    .navbar-logo-container {
-        margin-left: 5%;
-    }
+  a#navbar-logo-anchor {
+    margin-left: 5%;
+  }
 }
 
 /* LG */
 @media (min-width: 1199px) {
-    .navbar-links {
-        margin-top: 30px;
-        float: right ! important;
-    }
-    .navbar-social {
-        float: right ! important;
-        margin-top: 30px;
-        margin-right: 3%;
-    }
-    .navbar-social-separator {
-        /* Vertically center social links separator with logo */
-        margin-top: 40px;
-        /* Place separator to the left of social links */
-        float: right ! important;
-    }
-    .navbar-logo-container {
-        margin-left: 10%;
-    }
+  ul#navbar-links {
+    /* Vertically center links with logo */
+    margin-top: 30px;
+    /* Place links to the left of separator */
+    float: right ! important;
+  }
+  ul#navbar-social {
+    /* Vertically center links with logo */
+    margin-top: 30px;
+    /* Place social to the far right */
+    float: right ! important;
+    /* Some right margin - 3%? */
+    margin-right: 3%;
+  }
+  img#navbar-social-separator {
+    /* Vertically center social links separator with logo */
+    margin-top: 40px;
+    /* Place separator to the left of social links */
+    float: right ! important;
+  }
+  div#navbar-logo-anchor {
+    margin-left: 10%;
+  }
 }
 
 /* [SM,LG) */
 @media (min-width: 768px) and (max-width: 1199px) {
-    /* Convert navbar to centered fixed width to stack logo-social on top of
-    links */
-    .navbar {
-        width: 660px;
-        margin-right: auto;
-        margin-left: auto;
-    }
+  /* Convert navbar to centered fixed width to stack logo-social on top of
+  links */
+  nav.navbar {
+    width: 660px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
-    /* Indent the logo a bit to the right for alignment with links */
-    .navbar-logo-container {
-        margin-left: 30px;
-    }
-    .navbar-social {
-        /* Vertically center social links with logo */
-        margin-top: 30px;
-        /* Place social links to the far right */
-        float: right ! important;
-    }
-    .navbar-social-separator {
-        /* Vertically center social links separator with logo */
-        margin-top: 40px;
-        /* Place separator to the left of social links */
-        float: right ! important;
-    }
+  /* Indent the logo a bit to the right for alignment with links */
+  a#navbar-logo-anchor {
+    margin-left: 30px;
+  }
+  ul#navbar-social {
+    /* Vertically center social links with logo */
+    margin-top: 30px;
+    /* Place social links to the far right */
+    float: right ! important;
+  }
+  img#navbar-social-separator {
+    /* Vertically center social links separator with logo */
+    margin-top: 40px;
+    /* Place separator to the left of social links */
+    float: right ! important;
+  }
 
-    ul.navbar-links>li>a {
-        /* Bring links up slightly */
-        padding-top: 10px;
-    }
+  ul#navbar-links>li>a {
+    /* Bring links up slightly */
+    padding-top: 10px;
+  }
 }
 
 /* XS */
 @media (max-width: 767px) {
-    .navbar-social-button {
-        border: 0;
-        margin: 0.75em 0.25em 1em 0.2em;
-        /* Font-size is adjusted to make icon look correct size [320,768] */
-        font-size: 125%;
-        float: right ! important;
-    }
-    /* Ensure separator appears right of social button */
-    .navbar-social-separator {
-        margin-top: 20px;
-        float: right ! important;
-    }
+  nav.navbar {
+    margin-bottom: 5px;
+  }
+  button#navbar-social-button {
+    border: 0;
+    margin: 0.75em 0.25em 1em 0.2em;
+    /* Font-size is adjusted to make icon look correct size [320,768] */
+    font-size: 125%;
+    float: right ! important;
+  }
+  /* Ensure separator appears right of social button */
+  img#navbar-social-separator-xs {
+    margin-top: 20px;
+    float: right ! important;
+  }
 
-    .navbar-links-button {
-        border: 0;
-        margin: 0.75em 0.2em 1em 0.25em;
-        /* Font-size is adjusted to make icon look correct size [320,768] */
-        font-size: 125%;
-        float: left ! important;
-    }
-    /* Ensure separator appears left of links button */
-    .navbar-links-separator {
-        margin-top: 20px;
-        float: left ! important;
-    }
+  button#navbar-links-button {
+    border: 0;
+    margin: 0.75em 0.2em 1em 0.25em;
+    /* Font-size is adjusted to make icon look correct size [320,768] */
+    font-size: 125%;
+    float: left ! important;
+  }
+  /* Ensure separator appears left of links button */
+  img#navbar-links-separator {
+    margin-top: 20px;
+    float: left ! important;
+  }
 
-    /* Center the logo and make the width shrink as viewport shrinks */
-    .navbar-logo-container {
-        position: absolute;
-        width: 66%;
-        left: 16%;
-        text-align: center;
-        margin: auto;
-    }
+  /* Center the logo and make the width shrink as viewport shrinks */
+  a#navbar-logo-anchor {
+    position: absolute;
+    width: 66%;
+    left: 16%;
+    text-align: center;
+    margin: auto;
+  }
 
-    .navbar-logo {
-        /* Make logo image responsive */
-        max-width: 100%;
-        height: auto;
-        /* But leave off display: block which causes horiz centering issues for logo
-        [400,767]*/
-    }
+  img#navbar-logo {
+    /* Make logo image responsive */
+    max-width: 100%;
+    height: auto;
+    /* But leave off display: block which causes horiz centering issues for logo
+    [400,767]*/
+  }
 
-    /* Make the dropdown menu align left for links */
-    .navbar-links {
-        float: left ! important
-    }
-    /* Make the dropdown menu align right for social icons */
-    .navbar-social {
-        float: right ! important
-    }
+  /* Make the dropdown menu align left for links */
+  ul#navbar-links {
+    float: left ! important
+  }
+  /* Make the dropdown menu align right for social icons */
+  ul#navbar-social {
+    float: right ! important
+  }
 }
 
