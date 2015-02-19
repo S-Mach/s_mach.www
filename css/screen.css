@@ -73,6 +73,21 @@ body {
   background-color: #f9a71a;
 }
 
+div.strip-arrow-yellow {
+  background-image: url(../images/arrow-yellow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 12px;
+}
+
+div.strip-arrow-white {
+  background-image: url(../images/arrow-white.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 12px;
+  background-color: #f9a71a;
+}
+
 .strip-white {
   /* Strips take up entire viewport width */
   width: 100%;
@@ -248,7 +263,7 @@ div#col-why-scala {
 }
 
 p#title-why-scala {
-  font-size: 16pt;
+  font-size: 17pt;
   font-weight: bold;
   letter-spacing: 0.085em;
   color: #f9a71a;
@@ -324,7 +339,7 @@ div#col-build-your-scala-team {
 }
 
 p#title-build-your-scala-team {
-  font-size: 16pt;
+  font-size: 17pt;
   font-weight: bold;
   letter-spacing: 0.085em;
   color: #ffffff;
@@ -508,7 +523,8 @@ div#button-learn-more {
   }
 
   div#col-build-your-scala-team {
-    padding-top: 13%
+    padding-top: 13%;
+    text-align: right;
   }
 
 }
