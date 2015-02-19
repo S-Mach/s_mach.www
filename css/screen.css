@@ -50,7 +50,13 @@ img#navbar-social-icon-github {
   height: 20px
 }
 
-.strip {
+.yellow-strip {
+  /* Strips take up entire viewport width */
+  width: 100%;
+  background-color: #f9a71a;
+}
+
+.white-strip {
   /* Strips take up entire viewport width */
   width: 100%;
 }
@@ -60,11 +66,29 @@ img#strip-nav-shadow {
   height: 16px;
 }
 
-div.strip-recruit-train-place {
-  background-color: #f9a71a;
+div#strip-recruit-train-place {
+  position:relative;
 }
 
-div.container-recruit-train-place {
+img#cloud-1 {
+  position: absolute;
+  left: 50px;
+  top:35px;
+}
+
+img#cloud-2 {
+  position: absolute;
+  left: 1050px;
+  top: 70px;
+}
+
+img#cloud-3 {
+  position: absolute;
+  left: 1175px;
+  top: 30px;
+}
+
+div#container-recruit-train-place {
   padding-top: 2em;
   padding-bottom: 2em;
   margin: 0 auto 0 auto;
@@ -74,6 +98,31 @@ div.container-why-scala {
   padding-top: 2em;
   padding-bottom: 2em;
   margin: 0 auto 0 auto;
+}
+
+div.ribbon {
+  position: relative;
+  width: 306px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.ribbon>p {
+  position: absolute;
+  left: 120px;
+  top: 18px;
+  font-size: 16pt;
+}
+
+img.sketch {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img#sketch-place {
+  margin-top: 39px;
 }
 
 @media (min-width: 768px) {
@@ -197,6 +246,16 @@ div.container-why-scala {
   /* Make the dropdown menu align right for social icons */
   ul#navbar-social {
     float: right ! important
+  }
+
+  img.sketch {
+    max-width: 300px;
+  }
+  div.ribbon>img {
+    width: 290px;
+  }
+  div.ribbon>p {
+    left: 110px;
   }
 }
 

@@ -17,6 +17,7 @@
  4) Setting height: 10px on nav-shadow in sm to correct skew causes artifact
  5) Modify navbar sm so that logo doesn't responsive resize instead use fixed
  sizes larger for [460,767] and smaller for [*,459]
+ 6) Modify media-queries to xs settings by default
 -->
 <nav class="navbar navbar-default" role="navigation">
   <div class="navbar-header">
@@ -73,23 +74,39 @@
     </li>
   </ul>
 </nav>
-<img id="strip-nav-shadow" class="strip" src="images/nav-shadow.png"/>
-<div class="strip strip-recruit-train-place">
-  <div class="container container-recruit-train-place">
+<img id="strip-nav-shadow" class="yellow-strip" src="images/nav-shadow.png"/>
+<div id="strip-recruit-train-place" class="yellow-strip">
+  <img id="cloud-1" src="images/cloud-1.png"/>
+  <img id="cloud-2" src="images/cloud-2.png"/>
+  <img id="cloud-3" src="images/cloud-3.png"/>
+  <p style="text-align: center;font-size: 36pt">S-Mach Scala Internships</p>
+  <div id="container-recruit-train-place" class="container">
     <div class="row">
       <div class="col-lg-4">
-        <img class="img-responsive" src="images/recruit.png"/>
+        <img class="sketch" src="images/recruit.png"/>
+        <div class="ribbon">
+          <img src="images/ribbon.png"/>
+          <p>Recruit</p>
+        </div>
       </div>
       <div class="col-lg-4">
-        <img class="img-responsive" src="images/train.png"/>
+        <img class="sketch" src="images/train.png"/>
+        <div class="ribbon">
+          <img src="images/ribbon.png"/>
+          <p>Train</p>
+        </div>
       </div>
       <div class="col-lg-4">
-        <img class="img-responsive" src="images/place.png"/>
+        <img id="sketch-place" class="sketch" src="images/place.png"/>
+        <div class="ribbon">
+          <img src="images/ribbon.png"/>
+          <p>Place</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<div class="strip strip-why-scala">
+<div id="strip-why-scala" class="white-strip">
   <div class="container container-why-scala">
     <div class="row">
       <div class="col-lg-4">
