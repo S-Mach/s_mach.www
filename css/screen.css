@@ -39,6 +39,8 @@
 }
 */
 
+/*********************************** General **********************************/
+
 body {
   font-family: "OpenSans";
   font-weight: normal;
@@ -48,6 +50,21 @@ body {
   background-color: #ffffff;
   /* Fixes weird artifact after nav-shadow */
   line-height: 1;
+}
+
+.strip-yellow {
+  /* Strips take up entire viewport width */
+  width: 100%;
+  /* Top/bottom spacing */
+  padding: 24px 0 24px 0;
+  background-color: #f9a71a;
+}
+
+.strip-white {
+  /* Strips take up entire viewport width */
+  width: 100%;
+  /* Top/bottom spacing */
+  padding: 24px 0 24px 0;
 }
 
 /*********************************** Navbar ***********************************/
@@ -88,27 +105,15 @@ img#navbar-social-icon-github {
   height: 20px
 }
 
-.strip-yellow {
-  /* Strips take up entire viewport width */
-  width: 100%;
-  background-color: #f9a71a;
-}
-
-.strip-white {
-  /* Strips take up entire viewport width */
-  width: 100%;
-}
-
 img#strip-nav-shadow {
   /* Fix height to 16px (stretch is fine) */
   height: 16px;
+  padding: 0;
 }
 
 /************************* Strip-Recruit-Train-Place **************************/
 
 div#container-recruit-train-place {
-  /* Top/bottom spacing */
-  padding: 24px 0 24px 0;
   /* Center in strip */
   margin: 0 auto 0 auto;
 }
