@@ -258,7 +258,9 @@ div#container-why-scala {
 }
 
 div#col-why-scala {
+  /* Keep width of column from growing to viewport width */
   max-width: 390px;
+  /* Center */
   margin: 0 auto 0 auto;
 }
 
@@ -285,19 +287,15 @@ p#explain-why-scala {
 }
 
 img#sketch-why-scala {
+  /* Center */
   margin: 0 auto 0 auto;
 }
 
 /************************ Strip-Build-Your-Scala-Team **************************/
 
 div#strip-build-your-scala-team {
+  /* Setup for absolute positioning for sketch-choose-the-best */
   position: relative;
-}
-
-div#container-build-your-scala-team {
-  /* Center in strip */
-  margin: 0 auto 0 auto;
-  text-align: center;
 }
 
 img#sketch-choose-the-best {
@@ -306,35 +304,45 @@ img#sketch-choose-the-best {
   position: absolute;
   left: 0;
   padding-right: 20px;
-  /* Hack-adjust top position of choose-the-best sketch to keep it inside its
-  strip as it responsively resizes */
-  top: 55%;
+}
+/* Hack-adjust top position of choose-the-best sketch to keep it inside its
+strip as it responsively resizes */
+@media (max-width: 399px) {
+  img#sketch-choose-the-best {
+    top: 55%;
+  }
 }
 
-@media screen and (min-width: 400px) {
+@media (min-width: 400px) {
   img#sketch-choose-the-best {
     top:45%;
   }
 }
 
-@media screen and (min-width: 525px) {
+@media (min-width: 525px) {
   img#sketch-choose-the-best {
     top:35%;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   img#sketch-choose-the-best {
     top:30%;
   }
 }
+/* end hack top adjust */
 
-div#col-choose-the-best {
+div#container-build-your-scala-team {
+  /* Center in strip */
+  margin: 0 auto 0 auto;
+  /* Start with text aligned center for XS */
   text-align: center;
 }
 
 div#col-build-your-scala-team {
+  /* Keep width of column from growing to viewport width */
   max-width: 390px;
+  /* Center */
   margin: 0 auto 0 auto;
 }
 
@@ -352,8 +360,7 @@ p#summary-build-your-scala-team {
 }
 
 img#divider-build-your-scala-team {
-  text-align: left;
-  display: inline-block;
+  /* Spacing above and below */
   padding: 10px 0 15px 0;
 }
 
@@ -363,6 +370,7 @@ p#explain-build-your-scala-team {
 }
 
 div#button-learn-more {
+  /* Center */
   margin: 0 auto 0 auto;
 }
 
