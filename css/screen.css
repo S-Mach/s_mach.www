@@ -220,7 +220,10 @@ div.container-why-scala {
 }
 
 
+/****************************** Small -> Large ********************************/
+
 @media (min-width: 768px) {
+  /* When logo is not centered, need some left margin */
   a#navbar-logo-anchor {
     margin-left: 5%;
   }
@@ -337,22 +340,26 @@ div.container-why-scala {
     [400,767]*/
   }
 
-  /* Make the dropdown menu align left for links */
   ul#navbar-links {
+    /* Make the dropdown menu align left for links */
     float: left ! important
   }
-  /* Make the dropdown menu align right for social icons */
+
   ul#navbar-social {
+    /* Make the dropdown menu align right for social icons */
     float: right ! important
   }
 
-  img.sketch {
+  img#sketch-train {
+    /* Scale train sketch to 300px when columns are stacked */
     max-width: 300px;
   }
   div.ribbon>img {
+    /* Scale ribbons to 290px when columns are stacked */
     width: 290px;
   }
   div.ribbon>p {
+    /* Fix positioning of text on scaled down ribbons */
     left: 110px;
   }
 }
