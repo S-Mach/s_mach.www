@@ -1,8 +1,12 @@
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url(../fonts/OpenSans-Regular.ttf)
+}
 
 .navbar-default {
-    font-family: "Open Sans";
+    font-family: "OpenSans-Regular";
     font-weight: normal;
-    font-size: 12pt;
+    font-size: 14pt;
     color: #444443;
     background-color: #ffffff;
     border-color: transparent;
@@ -28,9 +32,23 @@ nav {
 
 /* LG */
 @media (min-width: 1199px) {
-    .navbar-item {
-        margin-top: 35px;
+    .navbar-links {
+        margin-top: 30px;
         float: right ! important;
+    }
+    .navbar-social {
+        float: right ! important;
+        margin-top: 30px;
+        margin-right: 3%;
+    }
+    .navbar-social-separator {
+        /* Vertically center social links separator with logo */
+        margin-top: 40px;
+        /* Place separator to the left of social links */
+        float: right ! important;
+    }
+    .navbar-logo-container {
+        margin-left: 10%;
     }
 }
 
@@ -39,7 +57,7 @@ nav {
     /* Convert navbar to centered fixed width to stack logo-social on top of
     links */
     .navbar {
-        width: 550px;
+        width: 660px;
         margin-right: auto;
         margin-left: auto;
     }
@@ -63,7 +81,7 @@ nav {
 
     ul.navbar-links>li>a {
         /* Bring links up slightly */
-        padding-top: 5px;
+        padding-top: 10px;
     }
 }
 

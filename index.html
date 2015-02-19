@@ -10,6 +10,9 @@
 <body>
 
 <!-- Based on http://jsfiddle.net/4Cc3p/1/ (http://stackoverflow.com/questions/18821238/multiple-collapse-buttons-in-navbar-with-bootstrap-3-0) -->
+<!-- TODO:
+ 1) Some kind of hover effect on links
+-->
 <nav class="navbar navbar-default" role="navigation">
   <div class="navbar-header">
     <!-- Note: z-order matters here! -->
@@ -33,10 +36,10 @@
     <li class="social"><a href="#"><img src="images/icon-phone.png" class="img-responsive" style="height:23px"/><span class="sr-only">Telephone</span></a></li>
     <li class="social"><a href="#"><img src="images/icon-github.png" class="img-responsive" style="height:20px"/><span class="sr-only">Github</span></a></li>
   </ul>
-  <img class="visible-sm visible-md navbar-social-separator" src="images/separator.png"/>
+  <img class="hidden-xs navbar-social-separator" src="images/separator.png"/>
   <ul class="navbar-item collapse navbar-collapse nav navbar-nav navbar-links" id="links">
     <li>
-        <a href="#">How's it work?</a>
+        <a class="active" href="#">How's it work?</a>
     </li>
     <li>
       <a href="#">For Interns</a>
