@@ -337,7 +337,7 @@ div#strip-build-your-scala-team {
 
 img#sketch-choose-the-best {
   /* Position so that arm is always coming from off screen for all viewport
-  widths */
+  widths (edge of pic is always aligned at 0 left on strip) */
   position: absolute;
   left: 0;
   padding-right: 20px;
@@ -477,9 +477,13 @@ p.blog-entry-sample {
   color: #8e8e8e;
 }
 
-a {
+p.blog-entry-sample>a {
+  /* Make all links in sample yellow */
   color: #f9a71a;
 }
+
+/****************************** Strip-Customers *******************************/
+
 
 /******************************* Extra Small **********************************/
 
