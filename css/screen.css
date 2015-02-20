@@ -3,26 +3,32 @@
 @font-face {
   font-family: "OpenSans";
   font-style: normal;
-  font-weight: normal;
-  src: url(../fonts/OpenSans-Regular.ttf)
-}
-@font-face {
-  font-family: "OpenSans";
-  font-style: normal;
-  font-weight: bold;
-  src: url(../fonts/OpenSans-Bold.ttf)
-}
-@font-face {
-  font-family: "OpenSans";
-  font-style: normal;
-  font-weight: 400;
+  font-weight: 200;
   src: url(../fonts/OpenSans-Light.ttf)
+}
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: normal; /* 400 */
+  src: url(../fonts/OpenSans-Regular.ttf)
 }
 @font-face {
   font-family: "OpenSans";
   font-style: normal;
   font-weight: 500;
   src: url(../fonts/OpenSans-Semibold.ttf)
+}
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: bold; /* 700 */
+  src: url(../fonts/OpenSans-Bold.ttf)
+}
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 900;
+  src: url(../fonts/OpenSans-ExtraBold.ttf)
 }
 @font-face {
   font-family: "OpenSans";
@@ -59,13 +65,13 @@ body {
   font-weight: normal;
   font-size: 12pt;
   /* Text color from logo (dark grey) */
-  color: #444443;
+  color: #393938;
   background-color: #ffffff;
   /* Fixes weird artifact after nav-shadow */
   line-height: 1;
 }
 
-.strip-yellow {
+div.strip-yellow {
   /* Strips take up entire viewport width */
   width: 100%;
   /* Top/bottom spacing */
@@ -73,31 +79,56 @@ body {
   background-color: #f9a71a;
 }
 
-div.strip-arrow-yellow {
+div.strip-white {
+  /* Strips take up entire viewport width */
+  width: 100%;
+  /* Top/bottom spacing */
+  padding: 24px 0 24px 0;
+}
+
+div.strip-offwhite {
+  /* Strips take up entire viewport width */
+  width: 100%;
+  /* Top/bottom spacing */
+  padding: 24px 0 24px 0;
+  background-color: #f5f5f5;
+}
+
+.cleaved-circle-button {
+  font-weight: 500;
+}
+
+div.strip-arrow-yellow-to-white {
   background-image: url(../images/arrow-yellow.png);
   background-repeat: no-repeat;
   background-position: center;
   height: 12px;
 }
 
-div.strip-arrow-white {
+div.strip-arrow-yellow-to-offwhite {
+  background-image: url(../images/arrow-yellow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f5f5;
+  height: 12px;
+}
+
+div.strip-arrow-white-to-yellow {
   background-image: url(../images/arrow-white.png);
   background-repeat: no-repeat;
   background-position: center;
-  height: 12px;
   background-color: #f9a71a;
+  height: 12px;
 }
 
-.strip-white {
-  /* Strips take up entire viewport width */
-  width: 100%;
-  /* Top/bottom spacing */
-  padding: 24px 0 24px 0;
+div.strip-arrow-offwhite-to-white {
+  background-image: url(../images/arrow-offwhite.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 12px;
 }
 
-.cleaved-circle-button {
-  font-weight: 500;
-}
+
 
 /*********************************** Navbar ***********************************/
 
@@ -117,7 +148,7 @@ nav.navbar-default {
 
 nav.navbar-default .navbar-nav>li>a {
   /* Override bootstrap text color to match main color */
-  color: #444443;
+  color: #393938;
 }
 
 img#navbar-social-icon-email {
@@ -138,8 +169,13 @@ img#navbar-social-icon-github {
 }
 
 img#strip-nav-shadow {
+  /*background-image: url(../images/nav-shadow.png);*/
+  /*background-color: #f9a71a;*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: center;*/
   /* Fix height to 16px (stretch is fine) */
   height: 16px;
+  width: 100%;
   padding: 0;
 }
 
@@ -275,6 +311,7 @@ p#summary-why-scala {
   font-size: 24pt;
   letter-spacing: 0.065em;
   font-weight: 400;
+  line-height: 1.2;
 }
 
 img#divider-why-scala {
@@ -291,7 +328,7 @@ img#sketch-why-scala {
   margin: 0 auto 0 auto;
 }
 
-/************************ Strip-Build-Your-Scala-Team **************************/
+/************************ Strip-Build-Your-Scala-Team *************************/
 
 div#strip-build-your-scala-team {
   /* Setup for absolute positioning for sketch-choose-the-best */
@@ -309,27 +346,34 @@ img#sketch-choose-the-best {
 strip as it responsively resizes */
 @media (max-width: 399px) {
   img#sketch-choose-the-best {
-    top: 55%;
+    top: 60%;
   }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 375px) {
   img#sketch-choose-the-best {
-    top:45%;
+    top:50%;
   }
 }
 
 @media (min-width: 525px) {
   img#sketch-choose-the-best {
-    top:35%;
+    top:40%;
   }
 }
 
 @media (min-width: 768px) {
   img#sketch-choose-the-best {
-    top:30%;
+    top:35%;
   }
 }
+
+@media (min-width: 1200px) {
+  img#sketch-choose-the-best {
+    top: 2.5%;
+  }
+}
+
 /* end hack top adjust */
 
 div#container-build-your-scala-team {
@@ -357,6 +401,7 @@ p#summary-build-your-scala-team {
   font-size: 24pt;
   letter-spacing: 0.065em;
   font-weight: 400;
+  line-height: 1.2;
 }
 
 img#divider-build-your-scala-team {
@@ -372,6 +417,68 @@ p#explain-build-your-scala-team {
 div#button-learn-more {
   /* Center */
   margin: 0 auto 0 auto;
+}
+
+/******************************** Strip-Blog **********************************/
+
+div#strip-blog {
+  text-align: center;
+}
+
+p#title-blog {
+  font-size: 16pt;
+  font-weight: bold;
+  letter-spacing: 0.085em;
+  color: #f9a71a;
+}
+
+p#summary-blog {
+  font-size: 22pt;
+  letter-spacing: 0.065em;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+img#divider-blog {
+  /* Spacing above and below */
+  padding: 15px 0 30px 0;
+}
+
+div.container-blog-entry {
+  text-align: left;
+  background-color: #ffffff;
+  max-width: 350px;
+  margin: 0 auto 20px auto;
+}
+
+div.container-blog-entry-text {
+  padding: 10px 10px 10px 10px;
+}
+
+p.blog-entry-date {
+  padding-top: 15px;
+  font-size: 10pt;
+  font-weight: 500;
+  letter-spacing: 0.065em;
+  color: #f9a71a;
+}
+
+p.blog-entry-title {
+  text-transform: uppercase;
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #393938;
+}
+
+p.blog-entry-sample {
+  font-size: 10pt;
+  line-height: 1.5;
+  color: #8e8e8e;
+}
+
+a {
+  color: #f9a71a;
 }
 
 /******************************* Extra Small **********************************/
@@ -490,9 +597,6 @@ div#button-learn-more {
     padding-top: 10px;
   }
 
-  img#sketch-choose-the-best {
-    top: 28%;
-  }
 }
 
 /*********************************** Large ************************************/
@@ -518,6 +622,7 @@ div#button-learn-more {
     /* Place separator to the left of social links */
     float: right ! important;
   }
+
   div#navbar-logo-anchor {
     margin-left: 10%;
   }
@@ -526,11 +631,8 @@ div#button-learn-more {
     padding: 100px 0 100px 0;
   }
 
-  img#sketch-choose-the-best {
-    top: 0;
-  }
-
   div#col-build-your-scala-team {
+    /* Vertically center with fixed values since height doesn't change in lg */
     padding-top: 13%;
     text-align: right;
   }
