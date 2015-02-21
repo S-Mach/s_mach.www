@@ -1,0 +1,386 @@
+/*
+                     ,i::,
+               :;;;;;;;
+              ;:,,::;.
+            1ft1;::;1tL
+              t1;::;1,
+               :;::;               _____       __  ___              __
+          fCLff ;:: tfLLC         / ___/      /  |/  /____ _ _____ / /_
+         CLft11 :,, i1tffLi       \__ \ ____ / /|_/ // __ `// ___// __ \
+         1t1i   .;;   .1tf       ___/ //___// /  / // /_/ // /__ / / / /
+       CLt1i    :,:    .1tfL.   /____/     /_/  /_/ \__,_/ \___//_/ /_/
+       Lft1,:;:       , 1tfL:
+       ;it1i ,,,:::;;;::1tti      s_mach.www
+         .t1i .,::;;; ;1tt        Copyright (c) 2014 S-Mach, Inc.
+         Lft11ii;::;ii1tfL:       Author: lance.gatlin@gmail.com
+          .L1 1tt1ttt,,Li
+            ...1LLLL...
+*/
+
+/************************* Strip-Recruit-Train-Place **************************/
+
+div#container-recruit-train-place {
+  /* Center in strip */
+  margin: 0 auto 0 auto;
+}
+
+div#container-title {
+  /* Spacing between title and sketches*/
+  padding-bottom: 30px;
+}
+
+p#scala-internships {
+  text-align: center;
+  font-size: 36pt;
+}
+
+img#divider-title {
+  /* Center */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* Top/bottom spacing */
+  padding: 10px 0 20px 0;
+}
+
+p#summary-recruit-train-place {
+  text-align: center;
+  font-size: 18pt;
+}
+
+div#col-recruit {
+  /* Allow for absolute positioning of cloud */
+  position: relative;
+  /* Center within column */
+  margin-left: auto;
+  margin-right: auto;
+  /* Once columns are stacked, prevent width from growing to viewport width.
+     Otherwise, cloud position isn't stable */
+  max-width: 390px;
+}
+
+img#cloud-1 {
+  /* Position cloud just upper left of recruit sketch */
+  position: absolute;
+  left: -5%;
+  top: -5%;
+}
+
+div#col-place {
+  /* Allow for absolute positioning of clouds */
+  position: relative;
+  /* Center within column */
+  margin-left: auto;
+  margin-right: auto;
+  /* Once columns are stacked, prevent width from growing to viewport width.
+     Otherwise, clouds positions aren't stable */
+  max-width: 390px;
+}
+
+img#sketch-place-cloud-2 {
+  /* Position cloud just upper right of place sketch */
+  position: absolute;
+  left: 70%;
+  top: 0;
+}
+
+img#sketch-place-cloud-3 {
+  /* Position cloud just upper right of place sketch */
+  position: absolute;
+  left: 90%;
+  top: -10%;
+}
+
+div.ribbon {
+  /* Allow ribbon text to be absolute positioned */
+  position: relative;
+  /* Force width to be always exactly image width */
+  width: 306px;
+  /* Center */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.ribbon>p {
+  /* Position ribbon text to appear in center of ribbon */
+  position: absolute;
+  left: 120px;
+  top: 18px;
+  font-size: 16pt;
+}
+
+img.sketch {
+  /* Center */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img#sketch-place {
+  /* Adjust place sketch (which is shorter) to align with recruit */
+  margin-top: 40px;
+}
+
+/* XS */
+@media (max-width: 767px) {
+  img#sketch-train {
+    /* Scale train sketch to 300px when columns are stacked */
+    max-width: 300px;
+  }
+  div.ribbon>img {
+    /* Scale ribbons to 290px when columns are stacked */
+    width: 290px;
+  }
+  div.ribbon>p {
+    /* Fix positioning of text on scaled down ribbons */
+    left: 110px;
+  }
+}
+
+
+/****************************** Strip-Why-Scala *******************************/
+
+div#container-why-scala {
+  /* Center in strip */
+  margin: 0 auto 0 auto;
+  text-align: center;
+}
+
+div#col-why-scala {
+  /* Keep width of column from growing to viewport width */
+  max-width: 390px;
+  /* Center */
+  margin: 0 auto 0 auto;
+}
+
+p#title-why-scala {
+  font-size: 17pt;
+  font-weight: bold;
+  letter-spacing: 0.085em;
+  color: #f9a71a;
+}
+
+p#summary-why-scala {
+  font-size: 24pt;
+  letter-spacing: 0.065em;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+img#divider-why-scala {
+  padding: 10px 0 15px 0;
+}
+
+p#explain-why-scala {
+  font-size: 14pt;
+  line-height: 1.5;
+}
+
+img#sketch-why-scala {
+  /* Center */
+  margin: 0 auto 0 auto;
+}
+
+/* Large */
+@media (min-width: 1199px) {
+
+  div#strip-why-scala {
+    padding: 100px 0 100px 0;
+  }
+}
+
+/************************ Strip-Build-Your-Scala-Team *************************/
+
+div#strip-build-your-scala-team {
+  /* Setup for absolute positioning for sketch-choose-the-best */
+  position: relative;
+}
+
+img#sketch-choose-the-best {
+  /* Position so that arm is always coming from off screen for all viewport
+  widths (edge of pic is always aligned at 0 left on strip) */
+  position: absolute;
+  left: 0;
+  padding-right: 20px;
+}
+/* Hack-adjust top position of choose-the-best sketch to keep it inside its
+strip as it responsively resizes */
+@media (max-width: 399px) {
+  img#sketch-choose-the-best {
+    top: 60%;
+  }
+}
+
+@media (min-width: 375px) {
+  img#sketch-choose-the-best {
+    top:50%;
+  }
+}
+
+@media (min-width: 525px) {
+  img#sketch-choose-the-best {
+    top:40%;
+  }
+}
+
+@media (min-width: 768px) {
+  img#sketch-choose-the-best {
+    top:35%;
+  }
+}
+
+@media (min-width: 1200px) {
+  img#sketch-choose-the-best {
+    top: 2.5%;
+  }
+}
+
+/* end hack top adjust */
+
+div#container-build-your-scala-team {
+  /* Center in strip */
+  margin: 0 auto 0 auto;
+  /* Start with text aligned center for XS */
+  text-align: center;
+}
+
+div#col-build-your-scala-team {
+  /* Keep width of column from growing to viewport width */
+  max-width: 390px;
+  /* Center */
+  margin: 0 auto 0 auto;
+}
+
+p#title-build-your-scala-team {
+  font-size: 17pt;
+  font-weight: bold;
+  letter-spacing: 0.085em;
+  color: #ffffff;
+}
+
+p#summary-build-your-scala-team {
+  font-size: 24pt;
+  letter-spacing: 0.065em;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+img#divider-build-your-scala-team {
+  /* Spacing above and below */
+  padding: 10px 0 15px 0;
+}
+
+p#explain-build-your-scala-team {
+  font-size: 14pt;
+  line-height: 1.5;
+}
+
+div#button-learn-more {
+  /* Center */
+  margin: 0 auto 0 auto;
+}
+
+/* Large */
+@media (min-width: 1199px) {
+
+ div#col-build-your-scala-team {
+    /* Vertically center with fixed values since height doesn't change in lg */
+    padding-top: 13%;
+    text-align: right;
+  }
+
+}
+
+/******************************** Strip-Blog **********************************/
+
+div#strip-blog {
+  text-align: center;
+}
+
+p#title-blog {
+  font-size: 16pt;
+  font-weight: bold;
+  letter-spacing: 0.085em;
+  color: #f9a71a;
+}
+
+p#summary-blog {
+  font-size: 22pt;
+  letter-spacing: 0.065em;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+img#divider-blog {
+  /* Spacing above and below */
+  padding: 15px 0 30px 0;
+}
+
+div.container-blog-entry {
+  text-align: left;
+  background-color: #ffffff;
+  max-width: 350px;
+  margin: 0 auto 20px auto;
+}
+
+div.container-blog-entry-text {
+  padding: 10px 10px 10px 10px;
+}
+
+p.blog-entry-date {
+  padding-top: 15px;
+  font-size: 10pt;
+  font-weight: 600;
+  letter-spacing: 0.065em;
+  color: #f9a71a;
+}
+
+p.blog-entry-title {
+  text-transform: uppercase;
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #393938;
+}
+
+p.blog-entry-sample {
+  font-size: 10pt;
+  line-height: 1.5;
+  color: #8e8e8e;
+}
+
+p.blog-entry-sample>a {
+  /* Make all links in sample yellow */
+  color: #f9a71a;
+}
+
+/****************************** Strip-Customers *******************************/
+
+div#strip-customers {
+  text-align: center;
+}
+
+p#title-customers {
+  font-size: 16pt;
+  font-weight: bold;
+  letter-spacing: 0.085em;
+  color: #f9a71a;
+}
+
+p#summary-customers {
+  font-size: 22pt;
+  letter-spacing: 0.065em;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+img#divider-customers {
+  /* Spacing above and below */
+  padding: 15px 0 40px 0;
+}
+
+div.col-customer {
+  padding-bottom: 25px;
+}
+
