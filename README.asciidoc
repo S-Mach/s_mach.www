@@ -12,7 +12,7 @@ necessary for hosting the web site http://s_mach.net
 
 The contents of this repository are licensed under the Creative Commons
 Attribution-NonCommercial-NoDerivatives 4.0 License
-(http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode). The files are
-released here only for educational purposes only. All links to images in files
-point at images that are copyrighted material of S-Mach, Inc. All rights are
-reserved for their exclusive use by S-Mach, Inc. 
+(http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode). The files here are
+released for educational purposes only. Many files contain links to remote
+images that are the copyrighted material of S-Mach, Inc. All rights are reserved
+for their exclusive use by S-Mach, Inc.
