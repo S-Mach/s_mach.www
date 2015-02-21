@@ -1,0 +1,18 @@
+= s_mach.www: Web hosting files for s_mach.net
+Lance Gatlin <lance.gatlin@gmail.com>
+v1,20-Feb-2015
+:blogpost-status: unpublished
+:blogpost-categories: s_mach, scala
+
+*UNDER CONSTRUCTION *
+
+This repository contains all of the files (HTML, CSS, Javascript, Scala, etc)
+necessary for hosting the web site http://s_mach.net
+
+
+The contents of this repository are licensed under the Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 License
+(http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode). The files are
+released here only for educational purposes only. All links to images in files
+point at images that are copyrighted material of S-Mach, Inc. All rights are
+reserved for their exclusive use by S-Mach, Inc. 
