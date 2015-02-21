@@ -4,7 +4,7 @@ v1,20-Feb-2015
 :blogpost-status: unpublished
 :blogpost-categories: s_mach, scala
 
-*UNDER CONSTRUCTION *
+*UNDER CONSTRUCTION*
 
 This repository contains all of the files (HTML, CSS, Javascript, Scala, etc)
 necessary for hosting the web site http://s_mach.net
