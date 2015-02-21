@@ -57,14 +57,14 @@ div.strip-offwhite {
 }
 
 div.strip-arrow-yellow-to-white {
-  background-image: url(../images/arrow-yellow.png);
+  background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-yellow_mvx8da.png);
   background-repeat: no-repeat;
   background-position: center;
   height: 12px;
 }
 
 div.strip-arrow-yellow-to-offwhite {
-  background-image: url(../images/arrow-yellow.png);
+  background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-yellow_mvx8da.png);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f5f5f5;
@@ -72,7 +72,7 @@ div.strip-arrow-yellow-to-offwhite {
 }
 
 div.strip-arrow-white-to-yellow {
-  background-image: url(../images/arrow-white.png);
+  background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-white_acs9id.png);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f9a71a;
@@ -80,7 +80,7 @@ div.strip-arrow-white-to-yellow {
 }
 
 div.strip-arrow-offwhite-to-white {
-  background-image: url(../images/arrow-offwhite.png);
+  background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-offwhite_flv8y6.png);
   background-repeat: no-repeat;
   background-position: center;
   height: 12px;
