@@ -4,11 +4,30 @@ v1,20-Feb-2015
 :blogpost-status: unpublished
 :blogpost-categories: s_mach, scala
 
-*UNDER CONSTRUCTION *
+*UNDER CONSTRUCTION*
 
+== Overview
 This repository contains all of the files (HTML, CSS, Javascript, Scala, etc)
 necessary for hosting the web site http://s_mach.net
 
+
+The static view of this site can be viewed
+link:http://s-mach.github.io/s_mach.www/[here]
+
+
+Goals of this repository:
+* Promote continuous improvement in S-Mach code product
+* Demonstrate current technical capabilities
+* Provide educational resource for how-to's and lessons learned
+
+The design goals of this website:
+* link:http://en.wikipedia.org/wiki/Responsive_web_design[Responsive web design]
+* link:http://designshack.net/articles/css/mobilefirst/[Mobile-first web design]
+* link:http://en.wikipedia.org/wiki/Unobtrusive_JavaScript[Unobtrusive Javascript]
+
+Many thanks to S-Mach's art designer:
+
+== License
 
 The contents of this repository are licensed under the Creative Commons
 Attribution-NonCommercial-NoDerivatives 4.0 License
