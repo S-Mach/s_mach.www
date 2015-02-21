@@ -15,19 +15,18 @@ The static view of this site can be viewed
 link:http://s-mach.github.io/s_mach.www/[here]
 
 
-Goals of this repository:
-
-* Promote continuous improvement in S-Mach code product
-* Demonstrate current technical capabilities
+.Goals of this repository:
+* Promote continuous improvement in S-Mach code product through attracting the
+highest level of critique
+* Demonstrate current technical capabilities of S-Mach
 * Provide educational resource for how-to's and lessons learned
 
-Design goals of this website:
-
+.Design goals of this website:
 * link:http://en.wikipedia.org/wiki/Responsive_web_design[Responsive web design]
 * link:http://designshack.net/articles/css/mobilefirst/[Mobile-first web design]
 * link:http://en.wikipedia.org/wiki/Unobtrusive_JavaScript[Unobtrusive Javascript]
 
-Many thanks to S-Mach's art designer:
+Many thanks to S-Mach's art designer!
 
 == License
 
