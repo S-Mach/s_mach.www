@@ -12,3 +12,5 @@ column stack. Make xs a carousel instead of single column stack
 10) Investigate weird artifact where height of strip-build-your-scala-team jumps by 50px between sm -> md transition. choose-the-best-blank.png resizes from 548 to 598 for no reason?
 11) Make footer-to-top image into button
 12) Figure out proper way to center content inside a bootstrap column
+13) Add clouds to hows-it-work[we-mentor-train-certify,you-interview-them] (using same technique from recruit-train-place)
+14) In hows-it-work, limit the max-width of all text sections to the width of the image when vertically stacked in xs,sm,md
