@@ -17,53 +17,73 @@
             ...1LLLL...
 */
 
-/******************************* Strip-We-Learn *******************************/
+/*********************************** Common ***********************************/
 
-div#container-we-learn {
-  /* Center in strip */
-  margin: 0 auto 0 auto;
-  text-align: center;
-}
-
-div#col-we-learn {
-  /* Keep width of column from growing to viewport width */
-  /*max-width: 390px;*/
-  /* Center */
-  margin: 0 auto 0 auto;
-}
-
-p#title-we-learn {
+p.title {
   font-size: 20pt;
   font-weight: 200;
   letter-spacing: 0.085em;
 }
 
-p#summary-we-learn {
-  font-size: 24pt;
-  letter-spacing: 0.065em;
-  font-weight: 400;
-  line-height: 1.2;
-}
-
-img#divider-we-learn {
+img.divider {
   padding: 10px 0 15px 0;
 }
 
-p#explain-we-learn {
+p.explain {
   font-size: 14pt;
   line-height: 1.5;
 }
 
-img#sketch-we-learn {
+div.container {
+  /* Center in strip */
+  margin: 0 auto 0 auto;
+  text-align: center;
+}
+
+img.sketch {
   /* Center */
   margin: 0 auto 0 auto;
 }
+/******************************* Strip-We-Learn *******************************/
 
 @media screen and (min-width: 1200px) {
   div#container-we-learn {
     text-align: left;
   }
   div#col-we-learn {
-    padding-top: 40px;
+    padding-top: 75px;
+  }
+}
+
+/******************************* Strip-We-Build *******************************/
+
+@media screen and (min-width: 1200px) {
+  div#container-we-build {
+    text-align: right;
+  }
+  div#col-we-build {
+    padding-top: 85px;
+  }
+}
+
+/******************************* Strip-We-Recruit *******************************/
+
+@media screen and (min-width: 1200px) {
+  div#strip-we-recruit {
+    position: relative;
+  }
+  img#cloud-we-recruit {
+    position: absolute;
+    top: 75px;
+    left: 7%;
+  }
+  div#container-we-recruit {
+    text-align: left;
+  }
+  div#col-we-recruit {
+    padding-top: 220px;
+  }
+  img#sketch-we-recruit-horizontal {
+    margin-top: -36px;
   }
 }
