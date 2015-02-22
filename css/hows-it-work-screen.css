@@ -120,6 +120,7 @@ div.ribbon>img {
   /* Scale ribbons to 290px when columns are stacked */
   width: 290px;
 }
+
 div.ribbon>p {
   /* Fix positioning of text on scaled down ribbons */
   left: 110px;

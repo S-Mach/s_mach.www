@@ -36,6 +36,8 @@ div.strip-yellow {
   /* Top/bottom spacing */
   padding: 24px 0 24px 0;
   background-color: #f9a71a;
+  /* Hide overflow outside strips (certain images (e.g. clouds) extend beyond strip) */
+  overflow: hidden;
 }
 
 div.strip-white {
@@ -43,6 +45,8 @@ div.strip-white {
   width: 100%;
   /* Top/bottom spacing */
   padding: 24px 0 24px 0;
+  /* Hide overflow outside strips (certain images (e.g. clouds) extend beyond strip) */
+  overflow: hidden;
 }
 
 div.strip-offwhite {
@@ -51,6 +55,8 @@ div.strip-offwhite {
   /* Top/bottom spacing */
   padding: 24px 0 24px 0;
   background-color: #f5f5f5;
+  /* Hide overflow outside strips (certain images (e.g. clouds) extend beyond strip) */
+  overflow: hidden;
 }
 
 .cleaved-circle-button {
