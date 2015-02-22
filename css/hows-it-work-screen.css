@@ -76,6 +76,8 @@ div.strip-text {
   div#strip-we-recruit {
     position: relative;
     max-height: 616px;
+    /* Allow we recruit sketch to overflow into next panel for effect */
+    overflow: visible;
   }
   img#cloud-we-recruit {
     position: absolute;
