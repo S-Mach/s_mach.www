@@ -3,11 +3,17 @@ Common
 * Figure out proper way to vertically center content inside a bootstrap column
 * Standardize bottom/top margin/padding/border to px, left/right to %
 * Modify media-queries to xs settings by default (mobile first)
+
+Footer
+---
+* Add highlighting for active link and hover highlight fo other links
 * Make footer-to-top image into button
+* Add design credit for Mark to footer
 
 Navbar
 ---
 * Some kind of hover effect on links
+* Add highlighting for active link
 * Tweak positioning to match mock up
 * Lower margin on social buttons
 * Setting height: 10px on nav-shadow in sm to correct skew causes artifact
