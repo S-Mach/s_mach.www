@@ -188,6 +188,9 @@ img#sketch-why-scala {
   div#strip-why-scala {
     padding: 100px 0 100px 0;
   }
+  div#container-why-scala {
+    text-align: left;
+  }
 }
 
 /************************ Strip-Build-Your-Scala-Team *************************/
