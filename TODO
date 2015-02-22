@@ -1,6 +1,6 @@
 Common
 ---
-12) Figure out proper way to vertically center content inside a bootstrap column
+* Figure out proper way to vertically center content inside a bootstrap column
 * Standardize bottom/top margin/padding/border to px, left/right to %
 * Modify media-queries to xs settings by default (mobile first)
 * Make footer-to-top image into button
