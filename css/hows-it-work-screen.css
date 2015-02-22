@@ -37,26 +37,26 @@ p.explain {
 div.container {
   /* Center in strip */
   margin: 0 auto 0 auto;
-  text-align: center;
 }
 
 img.sketch {
   /* Center */
+  display: block;
   margin: 0 auto 0 auto;
 }
 
-p.ribbon-label {
-  font-size: 12pt;
-  font-weight: bold;
+div.strip-text {
+  /* Center in strip */
+  margin: 0 auto 0 auto;
+  text-align: center;
+  max-width: 500px;
 }
 
 /******************************* Strip-We-Learn *******************************/
 
 @media screen and (min-width: 1200px) {
-  div#container-we-learn {
-    text-align: left;
-  }
   div#col-we-learn {
+    text-align: left;
     padding-top: 75px;
   }
 }
@@ -64,10 +64,8 @@ p.ribbon-label {
 /******************************* Strip-We-Build *******************************/
 
 @media screen and (min-width: 1200px) {
-  div#container-we-build {
-    text-align: right;
-  }
   div#col-we-build {
+    text-align: right;
     padding-top: 85px;
   }
 }
@@ -84,10 +82,8 @@ p.ribbon-label {
     top: 75px;
     left: 7%;
   }
-  div#container-we-recruit {
-    text-align: left;
-  }
   div#col-we-recruit {
+    text-align: left;
     padding-top: 200px;
   }
   img#sketch-we-recruit-horizontal {
@@ -102,14 +98,14 @@ div#container-mentor-train-certify-title {
 }
 
 div.ribbon {
+  /* Center */
+  display: block;
+  margin: 0 auto 0 auto;
+
   /* Allow ribbon text to be absolute positioned */
   position: relative;
   /* Force width to be always exactly image width */
   width: 306px;
-  /* Center */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 div.ribbon>p {
@@ -150,12 +146,20 @@ img#sketch-train {
 }
 
 @media screen and (min-width: 1200px) {
+  div#strip-we-mentor-train-certify {
+    padding: 70px 0 70px 0;
+  }
+
   img#sketch-certify {
     margin-top: 71px;
   }
+
+  div#col-we-mentor-train-certify {
+    max-width: none;
+  }
 }
 
-/***************************** You-interview-them *****************************/
+/************************** Strip-you-interview-them **************************/
 
 @media screen and (min-width: 1200px) {
   div#strip-you-interview-them {
@@ -167,7 +171,7 @@ img#sketch-train {
   }
 }
 
-/********************************** We-place **********************************/
+/******************************* Strip-we-place *******************************/
 
 @media screen and (min-width: 1200px) {
   div#strip-we-place {

@@ -1,16 +1,26 @@
-1) Some kind of hover effect on links
-2) Tweak positioning to match mock up
-3) Lower margin on social buttons
-4) Setting height: 10px on nav-shadow in sm to correct skew causes artifact
-5) Modify navbar sm so that logo doesn't responsive resize instead use fixed
+Common
+---
+12) Figure out proper way to vertically center content inside a bootstrap column
+* Standardize bottom/top margin/padding/border to px, left/right to %
+* Modify media-queries to xs settings by default (mobile first)
+* Make footer-to-top image into button
+
+Navbar
+---
+* Some kind of hover effect on links
+* Tweak positioning to match mock up
+* Lower margin on social buttons
+* Setting height: 10px on nav-shadow in sm to correct skew causes artifact
+* Modify navbar sm so that logo doesn't responsive resize instead use fixed
 sizes larger for [460,767] and smaller for [*,459]
-6) Modify media-queries to xs settings by default
-7) In strip-recruit-train-place: make [sm,md] smaller/tighter instead of single
+
+Home
+---
+* In strip-recruit-train-place: make [sm,md] smaller/tighter instead of single
 column stack. Make xs a carousel instead of single column stack
-8) Standardize bottom/top margin/padding/border to px, left/right to %
-9) Use tutorial here to make proper cleaved-circle-button CSS: http://line25.com/tutorials/how-to-build-a-simple-button-with-css-image-sprites
-10) Investigate weird artifact where height of strip-build-your-scala-team jumps by 50px between sm -> md transition. choose-the-best-blank.png resizes from 548 to 598 for no reason?
-11) Make footer-to-top image into button
-12) Figure out proper way to center content inside a bootstrap column
-13) Add clouds to hows-it-work[we-mentor-train-certify,you-interview-them] (using same technique from recruit-train-place)
-14) In hows-it-work, limit the max-width of all text sections to the width of the image when vertically stacked in xs,sm,md
+* Use tutorial here to make proper cleaved-circle-button CSS: http://line25.com/tutorials/how-to-build-a-simple-button-with-css-image-sprites
+* Investigate weird artifact where height of strip-build-your-scala-team jumps by 50px between sm -> md transition. choose-the-best-blank.png resizes from 548 to 598 for no reason?
+
+How's it work?
+---
+* Add clouds to hows-it-work[we-mentor-train-certify,you-interview-them] (using same technique from recruit-train-place)
