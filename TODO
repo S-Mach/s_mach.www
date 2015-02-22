@@ -26,7 +26,9 @@ Home
 column stack. Make xs a carousel instead of single column stack
 * Use tutorial here to make proper cleaved-circle-button CSS: http://line25.com/tutorials/how-to-build-a-simple-button-with-css-image-sprites
 * Investigate weird artifact where height of strip-build-your-scala-team jumps by 50px between sm -> md transition. choose-the-best-blank.png resizes from 548 to 598 for no reason?
+* Collapse recruit-train-place to carousel instead of stacking
 
 How's it work?
 ---
 * Add clouds to hows-it-work[we-mentor-train-certify,you-interview-them] (using same technique from recruit-train-place)
+* Collapse mentor-train-certify to carousel instead of stacking
