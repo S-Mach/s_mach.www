@@ -1,4 +1,4 @@
-name := "my-first-app"
+name := "s-mach"
 
 scalaVersion := "2.11.5"
 
