@@ -41,10 +41,6 @@ p#footer-copyright {
   color: #777d83;
 }
 
-.active {
-  color: #f9a71a;
-}
-
 /****************************** Small -> Large ********************************/
 
 @media (min-width: 768px) {

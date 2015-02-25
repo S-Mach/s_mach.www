@@ -30,6 +30,26 @@ body {
   line-height: 1;
 }
 
+a {
+  /* Override bootstrap color */
+  color: #393938;
+}
+
+a:active {
+
+}
+a:focus {
+
+}
+
+a:hover {
+
+}
+
+a:visited {
+
+}
+
 div.strip-yellow {
   /* Strips take up entire viewport width */
   width: 100%;

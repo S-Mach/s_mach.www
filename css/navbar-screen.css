@@ -26,16 +26,14 @@ nav {
   padding-top: 10px;
 }
 
-nav.navbar-default {
-  /* Override bootstrap, just use underlying white background */
-  background-color: transparent;
-  /* Override bootstrap, turn off border for navbar */
-  border: none;
+.nav>li>a.active {
+  background-color: #ccc;
 }
 
-nav.navbar-default .navbar-nav>li>a {
-  /* Override bootstrap text color to match main color */
+.nav>li>a:focus, .nav>li>a:hover {
+  /* Override bootstrap color */
   color: #393938;
+  background-color: #eee;
 }
 
 img#navbar-social-icon-email {
