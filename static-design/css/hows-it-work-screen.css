@@ -1,0 +1,188 @@
+/*
+                     ,i::,
+               :;;;;;;;
+              ;:,,::;.
+            1ft1;::;1tL
+              t1;::;1,
+               :;::;               _____       __  ___              __
+          fCLff ;:: tfLLC         / ___/      /  |/  /____ _ _____ / /_
+         CLft11 :,, i1tffLi       \__ \ ____ / /|_/ // __ `// ___// __ \
+         1t1i   .;;   .1tf       ___/ //___// /  / // /_/ // /__ / / / /
+       CLt1i    :,:    .1tfL.   /____/     /_/  /_/ \__,_/ \___//_/ /_/
+       Lft1,:;:       , 1tfL:
+       ;it1i ,,,:::;;;::1tti      s_mach.www
+         .t1i .,::;;; ;1tt        Copyright (c) 2014 S-Mach, Inc.
+         Lft11ii;::;ii1tfL:       Author: lance.gatlin@gmail.com
+          .L1 1tt1ttt,,Li
+            ...1LLLL...
+*/
+
+/*********************************** Common ***********************************/
+
+p.title {
+  font-size: 20pt;
+  font-weight: 200;
+  letter-spacing: 0.085em;
+}
+
+img.divider {
+  padding: 10px 0 15px 0;
+}
+
+p.explain {
+  font-size: 14pt;
+  line-height: 1.5;
+}
+
+div.container {
+  /* Center in strip */
+  margin: 0 auto 0 auto;
+}
+
+img.sketch {
+  /* Center */
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+div.strip-text {
+  /* Center in strip */
+  margin: 0 auto 0 auto;
+  text-align: center;
+  max-width: 500px;
+}
+
+/******************************* Strip-We-Learn *******************************/
+
+@media screen and (min-width: 1200px) {
+  div#col-we-learn {
+    text-align: left;
+    padding-top: 75px;
+  }
+}
+
+/******************************* Strip-We-Build *******************************/
+
+@media screen and (min-width: 1200px) {
+  div#col-we-build {
+    text-align: right;
+    padding-top: 85px;
+  }
+}
+
+/****************************** Strip-We-Recruit ******************************/
+
+@media screen and (min-width: 1200px) {
+  div#strip-we-recruit {
+    position: relative;
+    max-height: 616px;
+    /* Allow we recruit sketch to overflow into next panel for effect */
+    overflow: visible;
+  }
+  img#cloud-we-recruit {
+    position: absolute;
+    top: 75px;
+    left: 7%;
+  }
+  div#col-we-recruit {
+    text-align: left;
+    padding-top: 200px;
+  }
+  img#sketch-we-recruit-horizontal {
+    margin-top: -36px;
+  }
+}
+
+/************************ Strip-We-Mentor-Train-Certify ***********************/
+
+div#container-mentor-train-certify-title {
+  padding-bottom: 30px;
+}
+
+div.ribbon {
+  /* Center */
+  display: block;
+  margin: 0 auto 0 auto;
+
+  /* Allow ribbon text to be absolute positioned */
+  position: relative;
+  /* Force width to be always exactly image width */
+  width: 306px;
+}
+
+div.ribbon>p {
+  /* Position ribbon text to appear in center of ribbon */
+  position: absolute;
+  left: 120px;
+  top: 18px;
+  font-size: 16pt;
+}
+
+div.ribbon>img {
+  /* Scale ribbons to 290px when columns are stacked */
+  width: 290px;
+}
+
+div.ribbon>p {
+  /* Fix positioning of text on scaled down ribbons */
+  left: 110px;
+}
+
+img#sketch-mentor {
+  /* Scale train sketch to 300px when columns are stacked */
+  max-width: 300px;
+}
+
+img#sketch-train {
+  /* Scale train sketch to 300px when columns are stacked */
+  max-width: 300px;
+}
+
+@media screen and (min-width: 768px) {
+  img#sketch-mentor {
+    max-width: none;
+  }
+
+  img#sketch-train {
+    max-width: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  div#strip-we-mentor-train-certify {
+    padding: 70px 0 70px 0;
+  }
+
+  img#sketch-certify {
+    margin-top: 71px;
+  }
+
+  div#col-we-mentor-train-certify {
+    max-width: none;
+  }
+}
+
+/************************** Strip-you-interview-them **************************/
+
+@media screen and (min-width: 1200px) {
+  div#strip-you-interview-them {
+    padding: 70px 0 70px 0;
+  }
+  div#col-you-interview-them {
+    text-align: left;
+    padding-top: 100px;
+  }
+}
+
+/******************************* Strip-we-place *******************************/
+
+@media screen and (min-width: 1200px) {
+  div#strip-we-place {
+    padding: 70px 0 70px 0;
+  }
+
+  div#col-we-place {
+    text-align: right;
+    padding-top: 108px;
+  }
+}

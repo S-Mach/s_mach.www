@@ -1,0 +1,60 @@
+/*
+                     ,i::,
+               :;;;;;;;
+              ;:,,::;.
+            1ft1;::;1tL
+              t1;::;1,
+               :;::;               _____       __  ___              __
+          fCLff ;:: tfLLC         / ___/      /  |/  /____ _ _____ / /_
+         CLft11 :,, i1tffLi       \__ \ ____ / /|_/ // __ `// ___// __ \
+         1t1i   .;;   .1tf       ___/ //___// /  / // /_/ // /__ / / / /
+       CLt1i    :,:    .1tfL.   /____/     /_/  /_/ \__,_/ \___//_/ /_/
+       Lft1,:;:       , 1tfL:
+       ;it1i ,,,:::;;;::1tti      s_mach.www
+         .t1i .,::;;; ;1tt        Copyright (c) 2014 S-Mach, Inc.
+         Lft11ii;::;ii1tfL:       Author: lance.gatlin@gmail.com
+          .L1 1tt1ttt,,Li
+            ...1LLLL...
+*/
+
+/********************************** Footer ************************************/
+
+div#footer {
+  text-align: center;
+  background-color: #444443;
+}
+
+img#footer-logo {
+  padding-top: 20px;
+}
+
+div#footer-links>a {
+  /* Turn off footer-links for XS */
+  display: none;
+}
+
+p#footer-copyright {
+  padding: 40px 0 40px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 9pt;
+  color: #777d83;
+}
+
+/****************************** Small -> Large ********************************/
+
+@media (min-width: 768px) {
+
+  div#footer-links>a {
+    /* Turn footer links back on */
+    display: inline;
+    text-transform: uppercase;
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #959da4;
+    /* Add spacing between footer links */
+    margin-right: 10px;
+  }
+}
+

@@ -1,0 +1,123 @@
+/*
+                     ,i::,
+               :;;;;;;;
+              ;:,,::;.
+            1ft1;::;1tL
+              t1;::;1,
+               :;::;               _____       __  ___              __
+          fCLff ;:: tfLLC         / ___/      /  |/  /____ _ _____ / /_
+         CLft11 :,, i1tffLi       \__ \ ____ / /|_/ // __ `// ___// __ \
+         1t1i   .;;   .1tf       ___/ //___// /  / // /_/ // /__ / / / /
+       CLt1i    :,:    .1tfL.   /____/     /_/  /_/ \__,_/ \___//_/ /_/
+       Lft1,:;:       , 1tfL:
+       ;it1i ,,,:::;;;::1tti      s_mach.www
+         .t1i .,::;;; ;1tt        Copyright (c) 2014 S-Mach, Inc.
+         Lft11ii;::;ii1tfL:       Author: lance.gatlin@gmail.com
+          .L1 1tt1ttt,,Li
+            ...1LLLL...
+*/
+
+/*********************************** General **********************************/
+
+body {
+  font-family: "Open Sans";
+  font-weight: normal;
+  font-size: 12pt;
+  /* Text color from logo (dark grey) */
+  color: #393938;
+  background-color: #ffffff;
+  /* Fixes weird artifact after nav-shadow */
+  line-height: 1;
+}
+
+a {
+  /* Override bootstrap color */
+  color: #393938;
+}
+
+a:active {
+
+}
+a:focus {
+
+}
+
+a:hover {
+
+}
+
+a:visited {
+
+}
+
+div.strip-yellow {
+  /* Strips take up entire viewport width */
+  width: 100%;
+  /* Top/bottom spacing */
+  padding: 24px 0 24px 0;
+  background-color: #f9a71a;
+  /* Hide overflow outside strips (certain images (e.g. clouds) extend beyond strip) */
+  overflow: hidden;
+}
+
+div.strip-white {
+  /* Strips take up entire viewport width */
+  width: 100%;
+  /* Top/bottom spacing */
+  padding: 24px 0 24px 0;
+  /* Hide overflow outside strips (certain images (e.g. clouds) extend beyond strip) */
+  overflow: hidden;
+}
+
+div.strip-offwhite {
+  /* Strips take up entire viewport width */
+  width: 100%;
+  /* Top/bottom spacing */
+  padding: 24px 0 24px 0;
+  background-color: #f5f5f5;
+  /* Hide overflow outside strips (certain images (e.g. clouds) extend beyond strip) */
+  overflow: hidden;
+}
+
+.cleaved-circle-button {
+  font-weight: 600;
+}
+
+div.strip-arrow-yellow-to-white {
+  background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-yellow_mvx8da.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 12px;
+}
+
+div.strip-arrow-yellow-to-offwhite {
+  background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-yellow_mvx8da.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f5f5;
+  height: 12px;
+}
+
+div.strip-arrow-white-to-yellow {
+  background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-white_acs9id.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f9a71a;
+  height: 12px;
+}
+
+div.strip-arrow-white-to-offwhite {
+  background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-white_acs9id.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f5f5;
+  height: 12px;
+}
+
+div.strip-arrow-offwhite-to-white {
+  background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-offwhite_flv8y6.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 12px;
+}
+

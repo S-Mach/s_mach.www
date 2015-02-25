@@ -26,7 +26,7 @@ highest level of critique
 * link:http://designshack.net/articles/css/mobilefirst/[Mobile-first web design]
 * link:http://en.wikipedia.org/wiki/Unobtrusive_JavaScript[Unobtrusive Javascript]
 
-Many thanks to S-Mach's art designer!
+Many thanks to S-Mach's art designer http://silverrost.com!
 
 == License
 
