@@ -17,22 +17,28 @@
             ...1LLLL...
 */
 
-/*********************************** General **********************************/
+@s-mach-yellow: #f9a71a;
+@s-mach-dkgrey: #393938;
+@offwhite: #f5f5f5;
+
+@dkgreybg: #444443;
+@dkgreybg-text: #959da4;
+@dkgreybg-text-light: #777d83;
 
 body {
   font-family: "Open Sans";
   font-weight: normal;
   font-size: 12pt;
   /* Text color from logo (dark grey) */
-  color: #393938;
-  background-color: #ffffff;
+  color: @s-mach-dkgrey;
+  background-color: white;
   /* Fixes weird artifact after nav-shadow */
   line-height: 1;
 }
 
 a {
   /* Override bootstrap color */
-  color: #393938;
+  color: @s-mach-dkgrey;
 }
 
 a:active {
@@ -55,7 +61,7 @@ div.strip-yellow {
   width: 100%;
   /* Top/bottom spacing */
   padding: 24px 0 24px 0;
-  background-color: #f9a71a;
+  background-color: @s-mach-yellow;
   /* Hide overflow outside strips (certain images (e.g. clouds) extend beyond strip) */
   overflow: hidden;
 }
@@ -74,7 +80,7 @@ div.strip-offwhite {
   width: 100%;
   /* Top/bottom spacing */
   padding: 24px 0 24px 0;
-  background-color: #f5f5f5;
+  background-color: @offwhite;
   /* Hide overflow outside strips (certain images (e.g. clouds) extend beyond strip) */
   overflow: hidden;
 }
@@ -94,7 +100,7 @@ div.strip-arrow-yellow-to-offwhite {
   background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-yellow_mvx8da.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #f5f5f5;
+  background-color: @offwhite;
   height: 12px;
 }
 
@@ -102,7 +108,7 @@ div.strip-arrow-white-to-yellow {
   background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-white_acs9id.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #f9a71a;
+  background-color: @s-mach-yellow;
   height: 12px;
 }
 
@@ -110,7 +116,7 @@ div.strip-arrow-white-to-offwhite {
   background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-white_acs9id.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #f5f5f5;
+  background-color: @offwhite;
   height: 12px;
 }
 
