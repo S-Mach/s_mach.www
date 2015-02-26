@@ -10,6 +10,7 @@ resolvers += "Scalaz Bintray Repo"  at "http://dl.bintray.com/scalaz/releases"
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 libraryDependencies ++= Seq(
+  "com.typesafe" % "config" % "1.2.1",
   // Webjars allows including js in project like jars
   "org.webjars" %% "webjars-play" % "2.4.0-M2",
   "org.webjars" % "bootstrap" % "3.3.2-1"

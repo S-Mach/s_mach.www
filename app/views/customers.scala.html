@@ -1,19 +1,20 @@
 @(stripClass: String)
+@import cdn.assets._
 
 <div id="strip-customers" class="@stripClass">
   <div>
     <p id="title-customers">Our customers</p>
     <p id="summary-customers">You'll be in <b>good company!</b></p>
-    <img id="divider-customers" src="http://res.cloudinary.com/s-mach/image/upload/v1424475928/horiz-divider_r8bzdn.png"/>
+    <img id="divider-customers" src="@HorizDivider.url"/>
   </div>
   <div id="container-customers" class="container">
     <div class="row">
-      <div class="col-md-2 col-sm-4 col-customer"><img src="http://res.cloudinary.com/s-mach/image/upload/v1424475927/customer-example1_ikrxfh.png"/></div>
-      <div class="col-md-2 col-sm-4 col-customer"><img src="http://res.cloudinary.com/s-mach/image/upload/v1424475927/customer-example2_iptvas.png"/></div>
-      <div class="col-md-2 col-sm-4 col-customer"><img src="http://res.cloudinary.com/s-mach/image/upload/v1424475927/customer-example3_dzvsls.png"/></div>
-      <div class="col-md-2 col-sm-4 col-customer"><img src="http://res.cloudinary.com/s-mach/image/upload/v1424475927/customer-example4_uk4vks.png"/></div>
-      <div class="col-md-2 col-sm-4 col-customer"><img src="http://res.cloudinary.com/s-mach/image/upload/v1424475927/customer-example5_gko6oz.png"/></div>
-      <div class="col-md-2 col-sm-4 col-customer"><img src="http://res.cloudinary.com/s-mach/image/upload/v1424475928/customer-example6_frcnlg.png"/></div>
+      <div class="col-md-2 col-sm-4 col-customer"><img src="@CustomerExample1.url"/></div>
+      <div class="col-md-2 col-sm-4 col-customer"><img src="@CustomerExample2.url"/></div>
+      <div class="col-md-2 col-sm-4 col-customer"><img src="@CustomerExample3.url"/></div>
+      <div class="col-md-2 col-sm-4 col-customer"><img src="@CustomerExample4.url"/></div>
+      <div class="col-md-2 col-sm-4 col-customer"><img src="@CustomerExample5.url"/></div>
+      <div class="col-md-2 col-sm-4 col-customer"><img src="@CustomerExample6.url"/></div>
     </div>
   </div>
 </div>
