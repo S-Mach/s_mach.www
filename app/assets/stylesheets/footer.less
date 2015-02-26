@@ -24,7 +24,7 @@
 div#footer {
   text-align: center;
   background-color: @dkgreybg;
-  color: @dkgreybg-text-light;
+  color: @dkgreybg-text-darker;
 }
 
 img#footer-logo {
@@ -34,7 +34,12 @@ img#footer-logo {
 div#footer-links>a {
   /* Turn off footer-links for XS */
   display: none;
-  color: @dkgreybg-text;
+  /* Background of footer is dark so need to change font color */
+  color: @dkgreybg-text-bright;
+  &:visited {
+    color: @dkgreybg-text;
+  }
+  .anchor-focus-hover-active();
 }
 
 p#footer-copyright {
