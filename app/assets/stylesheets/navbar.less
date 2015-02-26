@@ -26,13 +26,18 @@ nav {
   padding-top: 10px;
 }
 
+.navbar {
+  /* Margin for XS */
+  margin-bottom: 5px;
+}
+
 .nav>li>a.active {
   background-color: #ccc;
 }
 
 .nav>li>a:focus, .nav>li>a:hover {
   /* Override bootstrap color */
-  color: @s-mach-dkgrey;
+  color: #393938;
   background-color: #eee;
 }
 
@@ -64,73 +69,88 @@ img#strip-nav-shadow {
   padding: 0;
 }
 
-/******************************* Extra Small **********************************/
-
-@media (max-width: 767px) {
-  nav.navbar {
-    margin-bottom: 5px;
-  }
-  button#navbar-social-button {
-    border: 0;
-    margin: 0.75em 0.25em 1em 0.2em;
-    /* Font-size is adjusted to make icon look correct size [320,768] */
-    font-size: 125%;
-    float: right ! important;
-  }
-  /* Ensure separator appears right of social button */
-  img#navbar-social-separator-xs {
-    margin-top: 20px;
-    float: right ! important;
-  }
-
-  button#navbar-links-button {
-    border: 0;
-    margin: 0.75em 0.2em 1em 0.25em;
-    /* Font-size is adjusted to make icon look correct size [320,768] */
-    font-size: 125%;
-    float: left ! important;
-  }
-  /* Ensure separator appears left of links button */
-  img#navbar-links-separator {
-    margin-top: 20px;
-    float: left ! important;
-  }
-
-  /* Center the logo and make the width shrink as viewport shrinks */
-  a#navbar-logo-anchor {
-    position: absolute;
-    width: 66%;
-    left: 16%;
-    text-align: center;
-    margin: auto;
-  }
-
-  img#navbar-logo {
-    /* Make logo image responsive */
-    max-width: 100%;
-    height: auto;
-    /* But leave off display: block which causes horiz centering issues for logo
-    [400,767]*/
-  }
-
-  ul#navbar-links {
-    /* Make the dropdown menu align left for links */
-    float: left ! important
-  }
-
-  ul#navbar-social {
-    /* Make the dropdown menu align right for social icons */
-    float: right ! important
-  }
+button#navbar-social-button {
+  border: 0;
+  margin: 0.75em 0.25em 1em 0.2em;
+  /* Font-size is adjusted to make icon look correct size [320,768] */
+  font-size: 125%;
+  float: right ! important;
 }
 
+/* Ensure separator appears right of social button */
+img#navbar-social-separator-xs {
+  margin-top: 20px;
+  float: right ! important;
+}
+
+
+button#navbar-links-button {
+  border: 0;
+  margin: 0.75em 0.2em 1em 0.25em;
+  /* Font-size is adjusted to make icon look correct size [320,768] */
+  font-size: 125%;
+  float: left ! important;
+}
+
+/* Ensure separator appears left of links button */
+img#navbar-links-separator {
+  margin-top: 20px;
+  float: left ! important;
+}
+
+/* Center the logo and make the width shrink as viewport shrinks */
+a#navbar-logo-anchor {
+  position: absolute;
+  width: 66%;
+  left: 16%;
+  text-align: center;
+  margin: auto;
+}
+
+img#navbar-logo {
+  /* Make logo image responsive */
+  max-width: 100%;
+  height: auto;
+  /* But leave off display: block which causes horiz centering issues for logo
+  [400,767]*/
+}
+
+ul#navbar-links {
+  /* Make the dropdown menu align left for links */
+  float: left ! important
+}
+
+ul#navbar-social {
+  /* Make the dropdown menu align right for social icons */
+  float: right ! important
+}
 
 /****************************** Small -> Large ********************************/
 
 @media (min-width: 768px) {
+  button#navbar-links-button {
+    float: none;
+  }
+
+  img#navbar-links-separator {
+    float: none;
+  }
+
+  ul#navbar-links {
+    float: none;
+  }
+
+  ul#navbar-social {
+    float: none;
+  }
+
   /* When logo is not centered, need some left margin */
   a#navbar-logo-anchor {
-    margin-left: 5%;
+    position: inherit;
+    width: 100%;
+    left: inherit;
+    text-align: inherit;
+    margin: inherit;
   }
 }
 
@@ -141,20 +161,21 @@ img#strip-nav-shadow {
   links */
   nav.navbar {
     width: 660px;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto 5px auto;
   }
 
   /* Indent the logo a bit to the right for alignment with links */
   a#navbar-logo-anchor {
     margin-left: 30px;
   }
+
   ul#navbar-social {
     /* Vertically center social links with logo */
     margin-top: 30px;
     /* Place social links to the far right */
     float: right ! important;
   }
+
   img#navbar-social-separator {
     /* Vertically center social links separator with logo */
     margin-top: 40px;
@@ -172,6 +193,10 @@ img#strip-nav-shadow {
 /*********************************** Large ************************************/
 
 @media (min-width: 1199px) {
+  nav.navbar {
+    margin-bottom: 10px;
+  }
+
   ul#navbar-links {
     /* Vertically center links with logo */
     margin-top: 30px;
@@ -193,9 +218,25 @@ img#strip-nav-shadow {
     float: right ! important;
   }
 
-  div#navbar-logo-anchor {
-    margin-left: 10%;
+  a#navbar-logo-anchor {
+    margin-left: 16%;
   }
 
 }
 
+/* Patch up issue in lower widths of LG where not quite enough room for links */
+@media (min-width: 1200px) and (max-width: 1235px) {
+
+  a#navbar-logo-anchor {
+    margin-left: 13%;
+  }
+
+  ul#navbar-social {
+    /* Vertically center links with logo */
+    margin-top: 30px;
+    /* Place social to the far right */
+    float: right ! important;
+    /* Some right margin - 3%? */
+    margin-right: 2%;
+  }
+}

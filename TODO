@@ -12,14 +12,13 @@ Footer
 
 Navbar
 ---
-* Some kind of hover effect on links
-* Add highlighting for active link
+* Fix hover, focus, active, visited on links
 * Tweak positioning to match mock up
 * Lower margin on social buttons
 * Setting height: 10px on nav-shadow in sm to correct skew causes artifact
 * Modify navbar sm so that logo doesn't responsive resize instead use fixed
 sizes larger for [460,767] and smaller for [*,459]
-* Not display correctly in XS
+* Figure out why bootstrap glyphicons are not displayed correctly
 
 Home
 ---
