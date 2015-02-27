@@ -6,12 +6,12 @@ Common
 Footer
 ---
 * Make footer-to-top image into button
-* Add design credit for Mark to footer
+* [MVP] Add design credit for Mark to footer
 
 Navbar
 ---
-* Figure out why bootstrap glyphicons are not displayed correctly
-* Fix hover, focus, active, visited on links
+* [MVP] Figure out why bootstrap glyphicons are not displayed correctly
+* [MVP] Fix hover, focus, active, visited on links
 * Tweak positioning to match mock up
 * Lower margin on social buttons
 * Setting height: 10px on nav-shadow in sm to correct skew causes artifact
@@ -20,8 +20,8 @@ sizes larger for [460,767] and smaller for [*,459]
 
 Home
 ---
-* Use tutorial here to make proper cleaved-circle-button CSS: http://line25.com/tutorials/how-to-build-a-simple-button-with-css-image-sprites
-* Work on content
+* [MVP] Use tutorial here to make proper cleaved-circle-button CSS: http://line25.com/tutorials/how-to-build-a-simple-button-with-css-image-sprites
+* [MVP] Work on content
 * In strip-recruit-train-place: make [sm,md] smaller/tighter instead of single
 column stack
 * Collapse recruit-train-place to carousel instead of stacking
@@ -29,14 +29,14 @@ column stack
 
 How's it work?
 ---
-* Add clouds to hows-it-work[we-mentor-train-certify,you-interview-them] (using same technique from recruit-train-place)
+* [MVP] Add clouds to hows-it-work[we-mentor-train-certify,you-interview-them] (using same technique from recruit-train-place)
 * Collapse mentor-train-certify to carousel instead of stacking
 
 About Us
 ---
-* New page
+* [MVP] New page
 
 Play
 ---
-* Minified js from bootstrap/jquery
-* Favicon.png
+* [MVP] Minified js from bootstrap/jquery
+* [MVP] Favicon.png
