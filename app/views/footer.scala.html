@@ -1,10 +1,11 @@
 @import cdn.assets._
-
+@import models.Nav
+    
 <div id="footer">
   <img id="footer-logo" src="@FooterLogo.url"/>
   <div>
     <div id="footer-links">
-      @for((title,url) <- Navbar.links) {
+      @for((title,url) <- Nav.links) {
         <a href="@url">@title</a>
       }
     </div>

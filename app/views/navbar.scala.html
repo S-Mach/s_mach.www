@@ -1,7 +1,7 @@
 @(active: String)
 
 @import cdn.assets._
-@import models.Navbar
+@import models.Nav
 
 <!-- Based on http://jsfiddle.net/4Cc3p/1/ (http://stackoverflow.com/questions/18821238/multiple-collapse-buttons-in-navbar-with-bootstrap-3-0) -->
 <nav class="navbar" role="navigation">
@@ -29,7 +29,7 @@
   </ul>
   <img id="navbar-social-separator" class="hidden-xs" src="@Separator.url"/>
   <ul id="navbar-links" class="navbar-item collapse navbar-collapse nav navbar-nav">
-    @for((title,url) <- Navbar.links.filterNot(_._1 == "Home")) {
+    @for((title,url) <- Nav.links.filterNot(_._1 == "Home")) {
       <li>
         <a href="@url">@title</a>
       </li>
