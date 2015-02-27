@@ -22,6 +22,7 @@ sizes larger for [460,767] and smaller for [*,459]
 
 Home
 ---
+* div.ribbon centering is off due to interference from hows-it-work.less
 * In strip-recruit-train-place: make [sm,md] smaller/tighter instead of single
 column stack. Make xs a carousel instead of single column stack
 * Use tutorial here to make proper cleaved-circle-button CSS: http://line25.com/tutorials/how-to-build-a-simple-button-with-css-image-sprites
@@ -42,4 +43,3 @@ Play
 ---
 * Minified js from bootstrap/jquery
 * Favicon.png
-* Menu items lookup function
