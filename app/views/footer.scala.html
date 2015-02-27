@@ -4,12 +4,9 @@
   <img id="footer-logo" src="@FooterLogo.url"/>
   <div>
     <div id="footer-links">
-      <a class="active" href="#">Home</a>
-      <a href="#">How's it work?</a>
-      <a href="#">For Interns</a>
-      <a href="#">Other Services</a>
-      <a href="#">About Us</a>
-      <a href="#">Blog</a>
+      @for((title,url) <- Navbar.links) {
+        <a href="@url">@title</a>
+      }
     </div>
     <p id="footer-copyright">Copyright &copy;2015, S-Mach, Inc. All rights reserved.</p>
   </div>
