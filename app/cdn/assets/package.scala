@@ -22,7 +22,7 @@ package object assets {
   object CustomerExample4 extends Asset
   object CustomerExample5 extends Asset
   object CustomerExample6 extends Asset
-  object FooterLogo extends Asset
+  object SMachGearLogo extends Asset
   object ButtonToTop extends Asset
   object ScalaMachine extends Asset
   object TrainingPlan extends Asset
