@@ -34,6 +34,12 @@ img#footer-logo {
 div#footer-links>a {
   /* Turn off footer-links for XS */
   display: none;
+  text-transform: uppercase;
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  /* Add spacing between footer links */
+  margin-right: 10px;
   /* Background of footer is dark so need to change font color */
   color: @dkgreybg-text-bright;
   &:visited {
@@ -52,16 +58,9 @@ p#footer-copyright {
 /****************************** Small -> Large ********************************/
 
 @media (min-width: 768px) {
-
   div#footer-links>a {
     /* Turn footer links back on */
     display: inline;
-    text-transform: uppercase;
-    font-size: 10pt;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    /* Add spacing between footer links */
-    margin-right: 10px;
   }
 }
 

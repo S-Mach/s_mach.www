@@ -146,3 +146,72 @@ div.strip-arrow-offwhite-to-white {
   height: 12px;
 }
 
+p.title {
+  font-size: 20pt;
+  font-weight: 200;
+  letter-spacing: 0.085em;
+}
+
+img.divider {
+  padding: 10px 0 15px 0;
+}
+
+p.explain {
+  font-size: 14pt;
+  line-height: 1.5;
+}
+
+div.container {
+  /* Center in strip */
+  margin: 0 auto 0 auto;
+}
+
+img.sketch {
+  /* Center */
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+div.strip-text {
+  /* Center in strip */
+  margin: 0 auto 0 auto;
+  text-align: center;
+  max-width: 500px;
+}
+
+div.ribbon {
+  /* Center */
+  display: block;
+  margin: 0 auto 0 auto;
+
+  /* Allow ribbon text to be absolute positioned */
+  position: relative;
+  /* Force width to be always exactly image width (responsive doesn't look right at lower widths) */
+  width: 306px;
+}
+
+div.ribbon>img {
+  /* Scale ribbons to 290px when columns are stacked */
+  width: 290px;
+}
+
+div.ribbon>p {
+  font-size: 16pt;
+
+  /* Position ribbon text to appear in center of ribbon */
+  position: absolute;
+  text-align: center;
+  /* Note: should be 0 but it doesn't look quite centered otherwise */
+  left: -3px;
+  top: 15px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  div.ribbon>img {
+    width: none;
+  }
+  div.ribbon.p {
+    left: 120px;
+  }
+}

@@ -91,53 +91,22 @@ img#sketch-place-cloud-3 {
   top: -10%;
 }
 
-div.ribbon {
-  /* Allow ribbon text to be absolute positioned */
-  position: relative;
-  /* Force width to be always exactly image width */
-  width: 306px;
-  /* Center */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-div.ribbon>p {
-  /* Position ribbon text to appear in center of ribbon */
-  position: absolute;
-  left: 120px;
-  top: 18px;
-  font-size: 16pt;
-}
-
-img.sketch {
-  /* Center */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 img#sketch-place {
   /* Adjust place sketch (which is shorter) to align with recruit */
   margin-top: 40px;
 }
 
-/* XS */
-@media (max-width: 767px) {
-  img#sketch-train {
-    /* Scale train sketch to 300px when columns are stacked */
-    max-width: 300px;
-  }
-  div.ribbon>img {
-    /* Scale ribbons to 290px when columns are stacked */
-    width: 290px;
-  }
-  div.ribbon>p {
-    /* Fix positioning of text on scaled down ribbons */
-    left: 110px;
-  }
+img#sketch-train {
+  /* Scale train sketch to 300px when columns are stacked */
+  max-width: 300px;
 }
 
+@media (min-width: 768px) {
+  img#sketch-train {
+    max-width: none;
+  }
+
+}
 
 /****************************** Strip-Why-Scala *******************************/
 
@@ -293,68 +262,5 @@ div#button-learn-more {
     text-align: right;
   }
 
-}
-
-/******************************** Strip-Blog **********************************/
-
-div#strip-blog {
-  text-align: center;
-}
-
-p#title-blog {
-  font-size: 16pt;
-  font-weight: bold;
-  letter-spacing: 0.085em;
-  color: #f9a71a;
-}
-
-p#summary-blog {
-  font-size: 22pt;
-  letter-spacing: 0.065em;
-  font-weight: 400;
-  line-height: 1.25;
-}
-
-img#divider-blog {
-  /* Spacing above and below */
-  padding: 15px 0 30px 0;
-}
-
-div.container-blog-entry {
-  text-align: left;
-  background-color: #ffffff;
-  max-width: 350px;
-  margin: 0 auto 20px auto;
-}
-
-div.container-blog-entry-text {
-  padding: 10px 10px 10px 10px;
-}
-
-p.blog-entry-date {
-  padding-top: 15px;
-  font-size: 10pt;
-  font-weight: 600;
-  letter-spacing: 0.065em;
-  color: @s-mach-yellow;
-}
-
-p.blog-entry-title {
-  text-transform: uppercase;
-  font-size: 10pt;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: #393938;
-}
-
-p.blog-entry-sample {
-  font-size: 10pt;
-  line-height: 1.5;
-  color: #8e8e8e;
-}
-
-p.blog-entry-sample>a {
-  /* Make all links in sample yellow */
-  color: @s-mach-yellow;
 }
 

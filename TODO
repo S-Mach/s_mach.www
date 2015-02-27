@@ -2,33 +2,30 @@ Common
 ---
 * Figure out proper way to vertically center content inside a bootstrap column
 * Standardize bottom/top margin/padding/border to px, left/right to %
-* Modify media-queries to xs settings by default (mobile first)
 
 Footer
 ---
-* Add highlighting for active link and hover highlight fo other links
 * Make footer-to-top image into button
 * Add design credit for Mark to footer
 
 Navbar
 ---
+* Figure out why bootstrap glyphicons are not displayed correctly
 * Fix hover, focus, active, visited on links
 * Tweak positioning to match mock up
 * Lower margin on social buttons
 * Setting height: 10px on nav-shadow in sm to correct skew causes artifact
 * Modify navbar sm so that logo doesn't responsive resize instead use fixed
 sizes larger for [460,767] and smaller for [*,459]
-* Figure out why bootstrap glyphicons are not displayed correctly
 
 Home
 ---
-* div.ribbon centering is off due to interference from hows-it-work.less
-* In strip-recruit-train-place: make [sm,md] smaller/tighter instead of single
-column stack. Make xs a carousel instead of single column stack
 * Use tutorial here to make proper cleaved-circle-button CSS: http://line25.com/tutorials/how-to-build-a-simple-button-with-css-image-sprites
-* Investigate weird artifact where height of strip-build-your-scala-team jumps by 50px between sm -> md transition. choose-the-best-blank.png resizes from 548 to 598 for no reason?
-* Collapse recruit-train-place to carousel instead of stacking
 * Work on content
+* In strip-recruit-train-place: make [sm,md] smaller/tighter instead of single
+column stack
+* Collapse recruit-train-place to carousel instead of stacking
+* Investigate weird artifact where height of strip-build-your-scala-team jumps by 50px between sm -> md transition. choose-the-best-blank.png resizes from 548 to 598 for no reason?
 
 How's it work?
 ---
