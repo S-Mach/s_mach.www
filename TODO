@@ -10,7 +10,6 @@ Footer
 
 Navbar
 ---
-* [MVP] Figure out why bootstrap glyphicons are not displayed correctly
 * [MVP] Fix hover, focus, active, visited on links
 * Tweak positioning to match mock up
 * Lower margin on social buttons
@@ -39,4 +38,4 @@ About Us
 Play
 ---
 * [MVP] Minified js from bootstrap/jquery
-* Add versioning (and possible fix for AssetResolver)
+* Add asset versioning (and fix for AssetResolver if it breaks)
