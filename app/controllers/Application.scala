@@ -4,7 +4,7 @@ import play.api.mvc.{Action, Controller}
 
 object Application extends Controller {
   def index = Action {
-    Ok(views.html.index())
+    Ok(views.html.home())
   }
 
   def howsItWork = Action {
