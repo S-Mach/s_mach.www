@@ -39,3 +39,4 @@ About Us
 Play
 ---
 * [MVP] Minified js from bootstrap/jquery
+* Add versioning (and possible fix for AssetResolver)

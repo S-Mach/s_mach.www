@@ -5,6 +5,7 @@
 GET     /                           controllers.Application.index()
 GET     /hows-it-work               controllers.Application.howsItWork()
 
-# Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
-GET     /webjars/*file              controllers.WebJarAssets.at(file)
+# Map static resources
+GET     /css/*file                  controllers.Css.at(file)
+GET     /fonts/*file                controllers.Fonts.at(file)
+GET     /favicons/*file             controllers.Favicons.at(file)
