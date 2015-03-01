@@ -39,3 +39,8 @@ Play
 ---
 * [MVP] Minified js from bootstrap/jquery
 * Add asset versioning (and fix for AssetResolver if it breaks)
+* [MVP] Asciidoc compiling and injection in templates
+
+Heroku
+---
+* [MVP] Deploy test server
