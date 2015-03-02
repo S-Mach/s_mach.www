@@ -1,4 +1,4 @@
 Scala is an emerging next generation JVM language with significant industry
 investment. Scala is type-safe, immutable by default and has a mature and robust
  eco-system that simplifies building scalable, concurrent and distributed
- applications. And Scala is fun!
+ applications. Also... Scala is fun!

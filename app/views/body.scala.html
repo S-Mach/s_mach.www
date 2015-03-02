@@ -1,5 +1,6 @@
-@import cdn.assets._
-@(active: String)(content: Html)
+@import util._
+
+@(active: String)(content: Html)(implicit components: Components)
 <!DOCTYPE html>
 <html lang="en">
 @**
@@ -30,7 +31,6 @@
 </head>
 <body>
 @navbar(active)
-<img id="strip-nav-shadow" class="strip-yellow" src="@NavShadow.url"/>
 @content
 @footer()
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>

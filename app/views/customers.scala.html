@@ -1,20 +1,23 @@
-@(stripClass: String)
-@import cdn.assets._
+@import util._
+@import assets._
+
+@(stripClass: String)(implicit components: Components)
+@import components._
 
 <div id="strip-customers" class="@stripClass">
   <div>
     <p id="title-customers">Our customers</p>
     <p id="summary-customers">You'll be in <b>good company!</b></p>
-    <img id="divider-customers" src="@HorizDivider.url"/>
+    <img id="divider-customers" src="@images.HorizDivider.url"/>
   </div>
   <div id="container-customers" class="container">
     <div class="row">
-      <div class="col-md-2 col-sm-4 col-customer"><img src="@CustomerExample1.url"/></div>
-      <div class="col-md-2 col-sm-4 col-customer"><img src="@CustomerExample2.url"/></div>
-      <div class="col-md-2 col-sm-4 col-customer"><img src="@CustomerExample3.url"/></div>
-      <div class="col-md-2 col-sm-4 col-customer"><img src="@CustomerExample4.url"/></div>
-      <div class="col-md-2 col-sm-4 col-customer"><img src="@CustomerExample5.url"/></div>
-      <div class="col-md-2 col-sm-4 col-customer"><img src="@CustomerExample6.url"/></div>
+      <div class="col-md-2 col-sm-4 col-customer"><img src="@images.CustomerExample1.url"/></div>
+      <div class="col-md-2 col-sm-4 col-customer"><img src="@images.CustomerExample2.url"/></div>
+      <div class="col-md-2 col-sm-4 col-customer"><img src="@images.CustomerExample3.url"/></div>
+      <div class="col-md-2 col-sm-4 col-customer"><img src="@images.CustomerExample4.url"/></div>
+      <div class="col-md-2 col-sm-4 col-customer"><img src="@images.CustomerExample5.url"/></div>
+      <div class="col-md-2 col-sm-4 col-customer"><img src="@images.CustomerExample6.url"/></div>
     </div>
   </div>
 </div>

@@ -1,8 +1,12 @@
-@import cdn.assets._
 @import models.Nav
+@import util._
+@import assets._
+
+@()(implicit components: Components)
+@import components._
 
 <div id="footer">
-  <img id="footer-logo" src="@SMachGearLogo.url"/>
+  <img id="footer-logo" src="@images.S_MachGearLogo.url"/>
   <div>
     <div id="footer-links">
       @for((title,url) <- Nav.links) {
@@ -12,6 +16,6 @@
     <p id="footer-copyright">Copyright &copy;2015, S-Mach, Inc. All rights reserved.</p>
   </div>
   <a id="footer-button-to-top" href="#">
-    <img src="@ButtonToTop.url"/>
+    <img src="@images.ButtonToTop.url"/>
   </a>
 </div>

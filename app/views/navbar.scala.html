@@ -1,33 +1,35 @@
-@(active: String)
-
-@import cdn.assets._
 @import models.Nav
+@import util._
+@import assets._
+
+@(active: String)(implicit components: Components)
+@import components._
 
 <!-- Based on http://jsfiddle.net/4Cc3p/1/ (http://stackoverflow.com/questions/18821238/multiple-collapse-buttons-in-navbar-with-bootstrap-3-0) -->
 <nav class="navbar" role="navigation">
   <div class="navbar-header">
     <!-- Note: z-order matters here! -->
     <a id="navbar-logo-anchor" href="/">
-      <img id="navbar-logo" src="@SMachLogo.url"/>
+      <img id="navbar-logo" src="@images.S_MachLogo.url"/>
       <span class="sr-only">S-Mach</span>
     </a>
     <button id="navbar-links-button" class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-links">
       <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
       <span class="sr-only">Toggle links</span>
     </button>
-    <img id="navbar-links-separator" class="visible-xs" src="@Separator.url"/>
+    <img id="navbar-links-separator" class="visible-xs" src="@images.Separator.url"/>
     <button id="navbar-social-button" class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-social">
       <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
       <span class="sr-only">Toggle social</span>
     </button>
-    <img id="navbar-social-separator-xs" class="visible-xs" src="@Separator.url"/>
+    <img id="navbar-social-separator-xs" class="visible-xs" src="@images.Separator.url"/>
   </div>
   <ul id="navbar-social" class="navbar-item collapse navbar-collapse nav navbar-nav">
-    <li><a href="#"><img id="navbar-social-icon-email" class="img-responsive" src="@EmailIcon.url"/><span class="sr-only">Email</span></a></li>
-    <li><a href="#"><img id="navbar-social-icon-phone" class="img-responsive" src="@TelephoneIcon.url"/><span class="sr-only">Telephone</span></a></li>
-    <li><a href="#"><img id="navbar-social-icon-github"class="img-responsive" src="@GithubIcon.url"/><span class="sr-only">Github</span></a></li>
+    <li><a href="#"><img id="navbar-social-icon-email" class="img-responsive" src="@images.EmailIcon.url"/><span class="sr-only">Email</span></a></li>
+    <li><a href="#"><img id="navbar-social-icon-phone" class="img-responsive" src="@images.TelephoneIcon.url"/><span class="sr-only">Telephone</span></a></li>
+    <li><a href="#"><img id="navbar-social-icon-github"class="img-responsive" src="@images.GithubIcon.url"/><span class="sr-only">Github</span></a></li>
   </ul>
-  <img id="navbar-social-separator" class="hidden-xs" src="@Separator.url"/>
+  <img id="navbar-social-separator" class="hidden-xs" src="@images.Separator.url"/>
   <ul id="navbar-links" class="navbar-item collapse navbar-collapse nav navbar-nav">
     @for((title,url) <- Nav.links.filterNot(_._1 == "Home")) {
       <li>
@@ -36,3 +38,4 @@
     }
   </ul>
 </nav>
+<img id="strip-nav-shadow" class="strip-yellow" src="@images.NavShadow.url"/>

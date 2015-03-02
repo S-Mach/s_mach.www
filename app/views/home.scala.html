@@ -17,8 +17,11 @@
             ...1LLLL...
 **@
 
-@()
-@import cdn.assets._
+@import util._
+@import assets._
+
+@()(implicit components: Components)
+@import components._
 @body("Home") {
 
 <div id="strip-recruit-train-place" class="strip-yellow">
@@ -26,32 +29,32 @@
     <div id="container-title" class="row">
       <div class="col-lg-12">
         <p id="scala-internships">S-Mach <b>Scala Internships</b></p>
-        <img id="divider-title" src="@HorizDivider.url"/>
+        <img id="divider-title" src="@images.HorizDivider.url"/>
         <p id="summary-recruit-train-place">Work with tomorrow's <b>top engineers today</b>!</p>
       </div>
     </div>
     <div class="row">
       <div id="col-recruit" class="col-lg-4">
-        <img id="cloud-1" src="@Cloud1.url"/>
-        <img id="sketch-recruit" class="sketch" src="@Recruit.url"/>
+        <img id="cloud-1" src="@images.Cloud1.url"/>
+        <img id="sketch-recruit" class="sketch" src="@images.Recruit.url"/>
         <div class="ribbon">
-          <img src="@Ribbon.url"/>
+          <img src="@images.Ribbon.url"/>
           <p><b>Recruit</b></p>
         </div>
       </div>
       <div id="col-train" class="col-lg-4">
-        <img id="sketch-train" class="sketch" src="@Train.url"/>
+        <img id="sketch-train" class="sketch" src="@images.Train.url"/>
         <div class="ribbon">
-          <img src="@Ribbon.url"/>
+          <img src="@images.Ribbon.url"/>
           <p><b>Train</b></p>
         </div>
       </div>
       <div id="col-place" class="col-lg-4">
-        <img id="sketch-place-cloud-2" src="@Cloud2.url"/>
-        <img id="sketch-place-cloud-3" src="@Cloud1.url"/>
-        <img id="sketch-place" class="sketch" src="@Place.url"/>
+        <img id="sketch-place-cloud-2" src="@images.Cloud2.url"/>
+        <img id="sketch-place-cloud-3" src="@images.Cloud1.url"/>
+        <img id="sketch-place" class="sketch" src="@images.Place.url"/>
         <div class="ribbon">
-          <img src="@Ribbon.url"/>
+          <img src="@images.Ribbon.url"/>
           <p><b>Place</b></p>
         </div>
       </div>
@@ -65,15 +68,15 @@
       <div id="col-why-scala" class="col-lg-5">
         <p id="title-why-scala">Why Scala?</p>
         <p id="summary-why-scala">A bridge between <b>object-oriented and functional programming</b></p>
-        <img id="divider-why-scala" src="@HorizDivider.url"/>
-        <p id="explain-why-scala">Scala is an emerging next generation JVM language with significant industry investment. Scala is type-safe, immutable by default and has a mature and robust eco-system that simplifies building scalable, concurrent and distributed applications. And Scala is fun!</p>
+        <img id="divider-why-scala" src="@images.HorizDivider.url"/>
+        @text.WhyScala.html
         <div class="cleaved-circle-button">
           More about Scala
-          <img src="@CleavedCircleButton.url"/>
+          <img src="@images.CleavedCircleButton.url"/>
         </div>
       </div>
       <div class="col-lg-7">
-        <img id="sketch-why-scala" class="img-responsive" src="@WhyScala.url"/>
+        <img id="sketch-why-scala" class="img-responsive" src="@images.WhyScala.url"/>
       </div>
     </div>
   </div>
@@ -85,32 +88,32 @@
       <div id="col-build-your-scala-team" class="col-lg-4 col-lg-push-8">
         <p id="title-build-your-scala-team">Build your Scala team!</p>
         <p id="summary-build-your-scala-team">Choose the <b>best interns</b> Atlanta has to <b>offer</b></p>
-        <img id="divider-build-your-scala-team" src="@HorizDivider.url"/>
-        <p id="explain-build-your-scala-team">We find top-notch candidates that meet your criteria. We put them through our comprehensive Scala training program, customized specifically for your organization's Scala needs!</p>
+        <img id="divider-build-your-scala-team" src="@images.HorizDivider.url"/>
+        @text.BuildYourScalaTeam.html
         <div id="button-learn-more" class="cleaved-circle-button">
           How's it work?
-          <img src="@CleavedCircleButton.url"/>
+          <img src="@images.CleavedCircleButton.url"/>
         </div>
       </div>
       <div id="col-choose-the-best" class="col-lg-8 col-lg-pull-4">
-        <img id="blank-choose-the-best" class="img-responsive" src="@ChooseTheBestBlank.url"/>
+        <img id="blank-choose-the-best" class="img-responsive" src="@images.ChooseTheBestBlank.url"/>
       </div>
     </div>
   </div>
-  <img id="sketch-choose-the-best" class="img-responsive" src="@ChooseTheBest.url"/>
+  <img id="sketch-choose-the-best" class="img-responsive" src="@images.ChooseTheBest.url"/>
 </div>
 <div class="strip-arrow-yellow-to-offwhite"></div>
 <div id="strip-blog" class="strip-offwhite">
   <div>
     <p id="title-blog">From the blog</p>
     <p id="summary-blog"><b>The most recent</b> things to read</p>
-    <img id="divider-blog" src="@HorizDivider.url"/>
+    <img id="divider-blog" src="@images.HorizDivider.url"/>
   </div>
   <div id="container-blog" class="container">
     <div class="row">
       <div class="col-lg-4">
         <div class="container-blog-entry">
-          <img class="img-responsive" src="@BlogExample1.url"/>
+          <img class="img-responsive" src="@images.BlogExample1.url"/>
           <div class="container-blog-entry-text">
             <p class="blog-entry-date">23 October 2015</p>
             <p class="blog-entry-title">Maruis Eleifend Anteudictum</p>
@@ -120,7 +123,7 @@
       </div>
       <div class="col-lg-4">
         <div class="container-blog-entry">
-          <img class="img-responsive" src="@BlogExample2.url"/>
+          <img class="img-responsive" src="@images.BlogExample2.url"/>
           <div class="container-blog-entry-text">
             <p class="blog-entry-date">23 October 2015</p>
             <p class="blog-entry-title">Maruis Eleifend Anteudictum</p>
@@ -130,7 +133,7 @@
       </div>
       <div class="col-lg-4">
         <div class="container-blog-entry">
-          <img class="img-responsive" src="@BlogExample3.url"/>
+          <img class="img-responsive" src="@images.BlogExample3.url"/>
           <div class="container-blog-entry-text">
             <p class="blog-entry-date">23 October 2015</p>
             <p class="blog-entry-title">Maruis Eleifend Anteudictum</p>
@@ -142,7 +145,7 @@
   </div>
   <div id="button-see-all-entries" class="cleaved-circle-button">
     See all entries
-    <img src="@CleavedCircleButton.url"/>
+    <img src="@images.CleavedCircleButton.url"/>
   </div>
 </div>
 <div class="strip-arrow-offwhite-to-white"></div>
