@@ -28,9 +28,7 @@
   <div id="container-recruit-train-place" class="container">
     <div id="container-title" class="row">
       <div class="col-lg-12">
-        <p id="scala-internships">S-Mach <b>Scala Internships</b></p>
-        <img id="divider-title" src="@images.HorizDivider.url"/>
-        <p id="summary-recruit-train-place">Work with tomorrow's <b>top engineers today</b>!</p>
+        @text.home.SiteTitle.html
       </div>
     </div>
     <div class="row">
@@ -66,10 +64,7 @@
   <div id="container-why-scala" class="container">
     <div class="row">
       <div id="col-why-scala" class="col-lg-5">
-        <p id="title-why-scala">Why Scala?</p>
-        <p id="summary-why-scala">A bridge between <b>object-oriented and functional programming</b></p>
-        <img id="divider-why-scala" src="@images.HorizDivider.url"/>
-        @text.WhyScala.html
+        @text.home.WhyScala.html
         <div class="cleaved-circle-button">
           More about Scala
           <img src="@images.CleavedCircleButton.url"/>
@@ -86,10 +81,7 @@
   <div id="container-build-your-scala-team" class="container">
     <div class="row">
       <div id="col-build-your-scala-team" class="col-lg-4 col-lg-push-8">
-        <p id="title-build-your-scala-team">Build your Scala team!</p>
-        <p id="summary-build-your-scala-team">Choose the <b>best interns</b> Atlanta has to <b>offer</b></p>
-        <img id="divider-build-your-scala-team" src="@images.HorizDivider.url"/>
-        @text.BuildYourScalaTeam.html
+        @text.home.BuildYourScalaTeam.html
         <div id="button-learn-more" class="cleaved-circle-button">
           How's it work?
           <img src="@images.CleavedCircleButton.url"/>
@@ -103,51 +95,7 @@
   <img id="sketch-choose-the-best" class="img-responsive" src="@images.ChooseTheBest.url"/>
 </div>
 <div class="strip-arrow-yellow-to-offwhite"></div>
-<div id="strip-blog" class="strip-offwhite">
-  <div>
-    <p id="title-blog">From the blog</p>
-    <p id="summary-blog"><b>The most recent</b> things to read</p>
-    <img id="divider-blog" src="@images.HorizDivider.url"/>
-  </div>
-  <div id="container-blog" class="container">
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="container-blog-entry">
-          <img class="img-responsive" src="@images.BlogExample1.url"/>
-          <div class="container-blog-entry-text">
-            <p class="blog-entry-date">23 October 2015</p>
-            <p class="blog-entry-title">Maruis Eleifend Anteudictum</p>
-            <p class="blog-entry-sample">Prasent accsan arcu vulutate tristique trisistique. Ut vel enim vitae felis congue efficitur quis ac magna surabitur malesuada quisin lectus etnister ticidunt...<a class="blog-entry-more" href="#">More</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="container-blog-entry">
-          <img class="img-responsive" src="@images.BlogExample2.url"/>
-          <div class="container-blog-entry-text">
-            <p class="blog-entry-date">23 October 2015</p>
-            <p class="blog-entry-title">Maruis Eleifend Anteudictum</p>
-            <p class="blog-entry-sample">Prasent accsan arcu vulutate tristique trisistique. Ut vel enim vitae felis congue efficitur quis ac magna surabitur malesuada quisin lectus etnister ticidunt...<a class="blog-entry-more" href="#">More</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="container-blog-entry">
-          <img class="img-responsive" src="@images.BlogExample3.url"/>
-          <div class="container-blog-entry-text">
-            <p class="blog-entry-date">23 October 2015</p>
-            <p class="blog-entry-title">Maruis Eleifend Anteudictum</p>
-            <p class="blog-entry-sample">Prasent accsan arcu vulutate tristique trisistique. Ut vel enim vitae felis congue efficitur quis ac magna surabitur malesuada quisin lectus etnister ticidunt...<a class="blog-entry-more" href="#">More</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="button-see-all-entries" class="cleaved-circle-button">
-    See all entries
-    <img src="@images.CleavedCircleButton.url"/>
-  </div>
-</div>
+@blogSummary()
 <div class="strip-arrow-offwhite-to-white"></div>
 @customers("strip-white")
 

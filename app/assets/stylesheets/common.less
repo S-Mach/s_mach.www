@@ -211,6 +211,68 @@ div.ribbon>p {
   width: 100%;
 }
 
+hr {
+  /* Make the hr flow/align with text */
+  display: inline-block;
+
+  /* Woowoo settings */
+  position: relative;
+  padding: 0;
+  height: 0;
+  max-height: 0;
+  font-size: 1px;
+  line-height: 0;
+  clear: both;
+  border: none;
+
+  /* Force width of border to 95px */
+  width: 95px;
+
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border-bottom: 2px solid @s-mach-dkgrey;
+}
+
+h1 {
+  margin: 0 0 5px 0;
+  color: @s-mach-dkgrey;
+  font-size: 36pt;
+}
+
+h2 {
+  margin: 0 0 5px 0;
+  color: @s-mach-dkgrey;
+  font-size: 24pt;
+  letter-spacing: 0.065em;
+  line-height: 1.2;
+}
+
+h3 {
+  margin: 0 0 5px 0;
+  color: @s-mach-dkgrey;
+  font-size: 20pt;
+}
+
+h4 {
+  margin: 0 0 5px 0;
+  color: @s-mach-dkgrey;
+  font-size: 17pt;
+  font-weight: bold;
+  letter-spacing: 0.085em;
+}
+
+.strip-yellow h4 {
+  color: white;
+}
+
+.strip-white h4 {
+  color: @s-mach-yellow;
+}
+
+.strip-offwhite h4 {
+  color: @s-mach-yellow;
+}
+
 @media (min-width: 768px) {
   div.ribbon>img {
     width: none;

@@ -1,4 +1,4 @@
-/*
+@**
                      ,i::,
                :;;;;;;;
               ;:,,::;.
@@ -15,25 +15,32 @@
          Lft11ii;::;ii1tfL:       Author: lance.gatlin@gmail.com
           .L1 1tt1ttt,,Li
             ...1LLLL...
-*/
+**@
 
-@import "common";
+@import util._
+@import assets._
 
-/****************************** Strip-Customers *******************************/
-
-div#strip-customers {
-  text-align: center;
-}
-
-div#strip-customers h4 {
-  margin-bottom: 15px;
-}
-
-div#strip-customers h3 {
-  letter-spacing: 0.065em;
-}
-
-div.col-customer {
-  padding-bottom: 25px;
-}
-
+@()(implicit components: Components)
+@import components._
+<div id="strip-blog" class="strip-offwhite">
+  <div>
+    @text.BlogSummary.html
+  </div>
+  <div id="container-blog" class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        @blogSummaryEntry(images.BlogExample1.url)
+      </div>
+      <div class="col-lg-4">
+        @blogSummaryEntry(images.BlogExample2.url)
+      </div>
+      <div class="col-lg-4">
+        @blogSummaryEntry(images.BlogExample3.url)
+      </div>
+    </div>
+  </div>
+  <div id="button-see-all-entries" class="cleaved-circle-button">
+    See all entries
+    <img src="@images.CleavedCircleButton.url"/>
+  </div>
+</div>

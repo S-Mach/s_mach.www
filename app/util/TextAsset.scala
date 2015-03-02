@@ -2,16 +2,15 @@ package util
 
 import play.twirl.api.Html
 import service.TextService
-import s_mach.string._
 
-class TextAsset {
+class TextAsset(path: String = "") {
   // Note: object class names end in $ by default
   val name: String = {
-    this.getClass.getSimpleName
-      .dropRight(1)
-      .toWords(WordSplitter.CamelCase)
-      .map(_.toLowerCase)
-      .mkString("-")
+    s"$path/${
+      this.getClass.getSimpleName
+        .dropRight(1)
+        .camelToHyphenCase
+    }"
   }
   def html(implicit textService:TextService): Html = {
     Html(textService.renderHtmlFragment(

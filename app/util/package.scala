@@ -1,5 +1,6 @@
 import com.typesafe.config.Config
 import scala.collection.JavaConverters._
+import s_mach.string._
 
 package object util {
   implicit class PimpMyOption[A](val self: Option[A]) extends AnyVal {
@@ -17,6 +18,14 @@ package object util {
         val url = inner.getString(key)
         (key,url)
       }.toMap
+    }
+  }
+
+  implicit class PimpMyString(val self: String) extends AnyVal {
+    def camelToHyphenCase : String = {
+      self.toWords(WordSplitter.CamelCase)
+        .map(_.toLowerCase)
+        .mkString("-")
     }
   }
 }

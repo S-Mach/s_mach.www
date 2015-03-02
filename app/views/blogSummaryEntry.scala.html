@@ -1,4 +1,4 @@
-/*
+@**
                      ,i::,
                :;;;;;;;
               ;:,,::;.
@@ -15,25 +15,18 @@
          Lft11ii;::;ii1tfL:       Author: lance.gatlin@gmail.com
           .L1 1tt1ttt,,Li
             ...1LLLL...
-*/
+**@
 
-@import "common";
+@import util._
+@import assets._
 
-/****************************** Strip-Customers *******************************/
-
-div#strip-customers {
-  text-align: center;
-}
-
-div#strip-customers h4 {
-  margin-bottom: 15px;
-}
-
-div#strip-customers h3 {
-  letter-spacing: 0.065em;
-}
-
-div.col-customer {
-  padding-bottom: 25px;
-}
-
+@(imageUrl: String)(implicit components: Components)
+@import components._
+<div class="container-blog-entry">
+  <img class="img-responsive" src="@imageUrl"/>
+  <div class="container-blog-entry-text">
+    <p class="blog-entry-date">23 October 2015</p>
+    <p class="blog-entry-title">Maruis Eleifend Anteudictum</p>
+    <p class="blog-entry-sample">Prasent accsan arcu vulutate tristique trisistique. Ut vel enim vitae felis congue efficitur quis ac magna surabitur malesuada quisin lectus etnister ticidunt...<a class="blog-entry-more" href="#">More</a></p>
+  </div>
+</div>

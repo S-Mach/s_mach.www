@@ -17,6 +17,7 @@ class TextServiceImpl extends TextService {
   // Note: order text type enums are tried
   val textTypes = {
     Seq(
+      Html,
       Asciidoc,
       PlainText
     )
@@ -24,6 +25,7 @@ class TextServiceImpl extends TextService {
 
   override def find(id: String): Option[Token] = {
     def extFor(textType: TextTypeEnum) : String = textType match {
+      case Html => ".html"
       case Asciidoc => ".asciidoc"
       case PlainText => ".txt"
     }
@@ -68,6 +70,8 @@ class TextServiceImpl extends TextService {
 
     import TextTypeEnum._
     token.textType match {
+      case Html =>
+          Source.fromURL(url).mkString
       case Asciidoc =>
         import sys.process._
         url #> "asciidoc --backend=wordpress -" !!
