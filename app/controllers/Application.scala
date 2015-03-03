@@ -6,8 +6,11 @@ import util.Components
 
 object Application extends Controller {
   implicit val components = new Components {
-    override def textService = new TextServiceImpl
-    override def cdnService = new CDNServiceImpl
+    override implicit val executionContext =
+      play.api.libs.concurrent.Execution.Implicits.defaultContext
+
+    override val textService = new TextServiceImpl
+    override val cdnService = new CDNServiceImpl
   }
 
   def index = Action {

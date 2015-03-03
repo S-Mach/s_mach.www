@@ -11,6 +11,7 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 libraryDependencies ++= Seq(
   "net.s_mach" %% "string" % "1.0.0",
+  "net.s_mach" %% "concurrent" % "1.1.0",
   "com.typesafe" % "config" % "1.2.1",
   // Webjars allows including js in project like jars
   "org.webjars" %% "webjars-play" % "2.4.0-M2",

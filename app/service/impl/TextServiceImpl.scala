@@ -7,6 +7,7 @@ import service.TextService
 import service.impl.TextTypeEnum.Asciidoc
 import util._
 import TextTypeEnum._
+import scala.concurrent.Future
 import scala.io.Source
 
 class TextServiceImpl extends TextService {
@@ -23,7 +24,7 @@ class TextServiceImpl extends TextService {
     )
   }
 
-  override def find(id: String): Option[Token] = {
+  override def find(id: String): Future[Option[Token]] = Future.successful {
     def extFor(textType: TextTypeEnum) : String = textType match {
       case Html => ".html"
       case Asciidoc => ".asciidoc"
@@ -62,7 +63,7 @@ class TextServiceImpl extends TextService {
     }
   }
 
-  override def renderHtmlFragment(token: Token): String = {
+  override def renderHtmlFragment(token: Token): Future[String] = Future.successful {
     val url =
       Play.current
         .resource(token.resource)
