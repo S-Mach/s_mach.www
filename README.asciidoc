@@ -12,6 +12,7 @@ necessary for hosting the web site http://s_mach.net
 
 
 The static view of this site: http://s-mach.github.io/s_mach.www/
+
 The Heroku test server: https://damp-taiga-2347.herokuapp.com/
 
 .Goals of this repository:
