@@ -11,9 +11,8 @@ This repository contains all of the files (HTML, CSS, Javascript, Scala, etc)
 necessary for hosting the web site http://s_mach.net
 
 
-The static view of this site can be viewed
-link:http://s-mach.github.io/s_mach.www/[here]
-
+The static view of this site: http://s-mach.github.io/s_mach.www/
+The Heroku test server: https://damp-taiga-2347.herokuapp.com/
 
 .Goals of this repository:
 * Promote continuous improvement in S-Mach code product through attracting the
