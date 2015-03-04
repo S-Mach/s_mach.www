@@ -12,7 +12,8 @@ Navbar
 * [MVP] Fix hover, focus, active, visited on links
 * Setting height: 10px on nav-shadow in sm to correct skew causes artifact
 * In xs (320px), make logo vcenter somehow
-
+* Replace navbar images with glyphs
+* In xs, a horiz-divider should appear above the dropdown menu
 Home
 ---
 * [MVP] Use tutorial here to make proper cleaved-circle-button CSS: http://line25.com/tutorials/how-to-build-a-simple-button-with-css-image-sprites

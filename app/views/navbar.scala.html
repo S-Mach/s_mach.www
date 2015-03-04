@@ -48,9 +48,24 @@
   </div>
   <ul id="navbar-social" class="navbar-item collapse navbar-collapse nav navbar-nav">
     <li class="navbar-separator hidden-xs"></li>
-    <li><a href="mailto:@text.navbar.Email.txt"><img id="navbar-social-icon-email" class="img-responsive" src="@images.EmailIcon.url"/><span class="sr-only">Email</span></a></li>
-    <li><a href="Tel:@text.navbar.Phone.txt"><img id="navbar-social-icon-phone" class="img-responsive" src="@images.TelephoneIcon.url"/><span class="sr-only">Telephone</span></a></li>
-    <li><a href="@text.navbar.Github.txt"><img id="navbar-social-icon-github"class="img-responsive" src="@images.GithubIcon.url"/><span class="sr-only">Github</span></a></li>
+    <li>
+      <a href="mailto:@text.navbar.Email.txt">
+        <img id="navbar-social-icon-email" class="img-responsive" src="@images.EmailIcon.url"/>
+        <span class="sr-only">Email</span>
+      </a>
+    </li>
+    <li>
+      <a href="Tel:@text.navbar.Phone.txt">
+        <img id="navbar-social-icon-phone" class="img-responsive" src="@images.TelephoneIcon.url"/>
+        <span class="sr-only">Telephone</span>
+      </a>
+    </li>
+    <li>
+      <a href="@text.navbar.Github.txt">
+        <img id="navbar-social-icon-github"class="img-responsive" src="@images.GithubIcon.url"/>
+        <span class="sr-only">Github</span>
+      </a>
+    </li>
   </ul>
   <ul id="navbar-links" class="navbar-item collapse navbar-collapse nav navbar-nav">
     @for((title,url) <- Nav.links.filterNot(_._1 == "Home")) {
