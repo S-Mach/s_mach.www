@@ -41,28 +41,31 @@ nav {
   background-color: #eee;
 }
 
+div.navbar-container {
+  &>* {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+  }
+  &>div.navbar-separator {
+    /* Turn off separators for extra small widths */
+    display: none;
+    @media (min-width: 440px) {
+      display: inline-block;
+    }
+  }
+}
+
 div#navbar-links-container {
   float: left ! important;
 }
-div#navbar-links-container>* {
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
-}
-
 div#navbar-social-container {
   float: right ! important;
-}
-div#navbar-social-container>* {
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
 }
 
 .navbar-separator {
   display: inline-block;
   border-right: 1px solid #eee;
-//  margin-top: 35px;
   height: 50px;
 }
 
