@@ -39,7 +39,3 @@ Play
 ---
 * [MVP] Minified js from bootstrap/jquery
 * Add asset versioning (and fix for AssetResolver if it breaks)
-
-Heroku
----
-* [MVP] Deploy test server
