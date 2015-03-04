@@ -113,19 +113,12 @@ div#container-why-scala {
 div#col-why-scala {
   /* Keep width of column from growing to viewport width */
   max-width: 390px;
-  /* Center */
+  /* HCenter */
   margin: 0 auto 0 auto;
 }
 
-p#summary-why-scala {
-  font-size: 24pt;
-  letter-spacing: 0.065em;
-  font-weight: 400;
-  line-height: 1.2;
-}
-
 img#sketch-why-scala {
-  /* Center */
+  /* HCenter */
   margin: 0 auto 0 auto;
 }
 
@@ -153,43 +146,32 @@ img#sketch-choose-the-best {
   position: absolute;
   left: 0;
   padding-right: 20px;
-}
-/* Hack-adjust top position of choose-the-best sketch to keep it inside its
-strip as it responsively resizes */
-@media (max-width: 399px) {
-  img#sketch-choose-the-best {
+
+  /* Hack-adjust top position of choose-the-best sketch to keep it inside its
+  strip as it responsively resizes */
+  @media (max-width: 399px) {
     top: 60%;
   }
-}
 
-@media (min-width: 375px) {
-  img#sketch-choose-the-best {
+  @media (min-width: 375px) {
     top:50%;
   }
-}
 
-@media (min-width: 525px) {
-  img#sketch-choose-the-best {
+  @media (min-width: 525px) {
     top:40%;
   }
-}
 
-@media (min-width: 768px) {
-  img#sketch-choose-the-best {
+  @media (min-width: 768px) {
     top:35%;
   }
-}
 
-@media (min-width: 1200px) {
-  img#sketch-choose-the-best {
+  @media (min-width: 1200px) {
     top: 2.5%;
   }
 }
 
-/* end hack top adjust */
-
 div#container-build-your-scala-team {
-  /* Center in strip */
+  /* HCenter in strip */
   margin: 0 auto 0 auto;
   /* Start with text aligned center for XS */
   text-align: center;
@@ -198,40 +180,24 @@ div#container-build-your-scala-team {
 div#col-build-your-scala-team {
   /* Keep width of column from growing to viewport width */
   max-width: 390px;
-  /* Center */
+  /* HCenter */
   margin: 0 auto 0 auto;
 }
 
-p#title-build-your-scala-team {
-  font-size: 17pt;
-  font-weight: bold;
-  letter-spacing: 0.085em;
-  color: white;
-}
-
-p#summary-build-your-scala-team {
-  font-size: 24pt;
-  letter-spacing: 0.065em;
-  font-weight: 400;
-  line-height: 1.2;
-}
-
-img#divider-build-your-scala-team {
-  /* Spacing above and below */
-  padding: 10px 0 15px 0;
-}
-
 div#button-learn-more {
-  /* Center */
+  /* HCenter */
   margin: 0 auto 0 auto;
 }
 
 /* Large */
 @media (min-width: 1199px) {
 
+ div#container-build-your-scala-team {
+   /* Make container big enough for sketch */
+   padding: 30px 0 30px 0;
+ }
+
  div#col-build-your-scala-team {
-    /* Vertically center with fixed values since height doesn't change in lg */
-    padding-top: 13%;
     text-align: right;
   }
 

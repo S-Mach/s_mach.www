@@ -273,6 +273,17 @@ h4 {
   color: @s-mach-yellow;
 }
 
+/* VCenter columns in a bootstrap row */
+div.row.vcenter>div {
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+}
+
+div.row.vcenter {
+  display: table;
+}
+
 @media (min-width: 768px) {
   div.ribbon>img {
     width: none;
