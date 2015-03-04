@@ -276,12 +276,56 @@ h4 {
 /* VCenter columns in a bootstrap row when in lg */
 @media (min-width: 1200px) {
   div.row.vcenter-lg>div {
+/*
+  Note: documenting attempted vcenter methods below. Vcenter is not
+  straightforward because BS3 uses float on columns in a row. If float is
+  disabled then the col push/pull does not work.
+*/
+
+/* Method1: content is shifted up 50% and upper half is not visible
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+*/
+
+/* Method2: screws up all positioning
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+*/
+
+/* Method3: breaks push/pull in Firefox
     display: table-cell;
     vertical-align: middle;
     float: none;
+*/
+
+/* Method4: breaks push/pull in Firefox
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+*/
   }
   div.row.vcenter-lg {
+    // Note: this works! Thank god. Sadly it is CSS3. Screw backwards compat
+    display: flex;
+    align-items: center;
+
+/* Method2: screws up all positioning
+   position: relative;
+*/
+/* Method1:
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+*/
+/* Method3 & Method4
     display: table;
+*/
   }
 }
 

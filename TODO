@@ -1,8 +1,6 @@
 Common
 ---
-* Figure out proper way to vertically center content inside a bootstrap column
 * Standardize bottom/top margin/padding/border to px, left/right to %
-* [MVP] Firefox does not correctly handle bootstrap column push/pull
 
 Footer
 ---
@@ -12,6 +10,7 @@ Footer
 Navbar
 ---
 * [MVP] Fix hover, focus, active, visited on links
+* [MVP] Make icon buttons horizontal in xs
 * Tweak positioning to match mock up
 * Lower margin on social buttons
 * Setting height: 10px on nav-shadow in sm to correct skew causes artifact
