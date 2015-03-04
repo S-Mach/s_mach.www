@@ -41,6 +41,31 @@ nav {
   background-color: #eee;
 }
 
+div#navbar-links-container {
+  float: left ! important;
+}
+div#navbar-links-container>* {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+div#navbar-social-container {
+  float: right ! important;
+}
+div#navbar-social-container>* {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.navbar-separator {
+  display: inline-block;
+  border-right: 1px solid #eee;
+//  margin-top: 35px;
+  height: 50px;
+}
+
 img#navbar-social-icon-email {
   /* Correct position issue */
   margin-top: 3px;
@@ -58,44 +83,18 @@ img#navbar-social-icon-github {
   height: 20px
 }
 
-img#strip-nav-shadow {
-  /*background-image: url(../images/nav-shadow.png);*/
-  /*background-color: #f9a71a;*/
-  /*background-repeat: no-repeat;*/
-  /*background-position: center;*/
-  /* Fix height to 16px (stretch is fine) */
-  height: 16px;
-  width: 100%;
-  padding: 0;
-}
-
 button#navbar-social-button {
   border: 0;
   margin: 0.75em 0.25em 1em 0.2em;
   /* Font-size is adjusted to make icon look correct size [320,768] */
   font-size: 125%;
-  float: right ! important;
 }
-
-/* Ensure separator appears right of social button */
-img#navbar-social-separator-xs {
-  margin-top: 20px;
-  float: right ! important;
-}
-
 
 button#navbar-links-button {
   border: 0;
   margin: 0.75em 0.2em 1em 0.25em;
   /* Font-size is adjusted to make icon look correct size [320,768] */
   font-size: 125%;
-  float: left ! important;
-}
-
-/* Ensure separator appears left of links button */
-img#navbar-links-separator {
-  margin-top: 20px;
-  float: left ! important;
 }
 
 /* Center the logo and make the width shrink as viewport shrinks */
@@ -130,6 +129,17 @@ ul#navbar-social>li {
   display: inline-block;
 }
 
+img#strip-nav-shadow {
+  /*background-image: url(../images/nav-shadow.png);*/
+  /*background-color: #f9a71a;*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: center;*/
+  /* Fix height to 16px (stretch is fine) */
+  height: 16px;
+  width: 100%;
+  padding: 0;
+}
+
 /****************************** Small -> Large ********************************/
 
 @media (min-width: 768px) {
@@ -147,6 +157,10 @@ ul#navbar-social>li {
 
   ul#navbar-social {
     float: none;
+  }
+
+  ul#navbar-social>li.navbar-separator {
+    margin-right: 15px;
   }
 
   /* When logo is not centered, need some left margin */
@@ -221,6 +235,11 @@ ul#navbar-social>li {
     margin-top: 40px;
     /* Place separator to the left of social links */
     float: right ! important;
+  }
+
+  ul#navbar-links {
+    /* Turn off right padding to give illusion of links-social continuous list */
+    padding-right: 0;
   }
 
   a#navbar-logo-anchor {
