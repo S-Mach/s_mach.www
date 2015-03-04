@@ -26,5 +26,7 @@ trait TextService {
   def find(id: String) : Future[Option[Token]]
 
   def renderHtmlFragment(token: Token) : Future[String]
+
+  def renderText(token: Token) : Future[String]
 }
 

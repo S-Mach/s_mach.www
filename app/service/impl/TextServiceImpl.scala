@@ -99,4 +99,24 @@ class TextServiceImpl extends TextService {
     }
 
   }
+
+  override def renderText(token: Token): Future[String] = Future.successful {
+    val url =
+      Play.current
+        .resource(token.resource)
+        .getOrDie("Failed to find resource")
+
+    import TextTypeEnum._
+    token.textType match {
+      case Html =>
+        // TODO: extract all text within <p>
+        throw new UnsupportedOperationException
+      case Asciidoc =>
+        // TODO: extract all text within <p>
+        throw new UnsupportedOperationException
+      case PlainText =>
+        Source.fromURL(url).mkString
+    }
+
+  }
 }

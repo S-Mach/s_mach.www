@@ -31,6 +31,14 @@ class TextAsset(path: String = "") {
         .camelToHyphenCase
     }"
   }
+  def txt(implicit textService:TextService): Html = {
+    Html(textService.renderText(
+      textService.find(name).get.getOrDie(
+        s"Failed to find URL for asset $name!"
+      )
+    ).get)
+  }
+
   def html(implicit textService:TextService): Html = {
     Html(textService.renderHtmlFragment(
       textService.find(name).get.getOrDie(
