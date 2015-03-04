@@ -2,6 +2,7 @@ Common
 ---
 * Figure out proper way to vertically center content inside a bootstrap column
 * Standardize bottom/top margin/padding/border to px, left/right to %
+* [MVP] Firefox does not correctly handle bootstrap column push/pull
 
 Footer
 ---

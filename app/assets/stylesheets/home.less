@@ -135,39 +135,18 @@ img#sketch-why-scala {
 
 /************************ Strip-Build-Your-Scala-Team *************************/
 
-div#strip-build-your-scala-team {
-  /* Setup for absolute positioning for sketch-choose-the-best */
-  position: relative;
+img#sketch-choose-the-best {
+  margin-left: -15px;
 }
 
-img#sketch-choose-the-best {
+/* Note: this is hidden in xs,sm & md */
+img#sketch-choose-the-best-lg {
   /* Position so that arm is always coming from off screen for all viewport
   widths (edge of pic is always aligned at 0 left on strip) */
   position: absolute;
+  top: 15px;
   left: 0;
   padding-right: 20px;
-
-  /* Hack-adjust top position of choose-the-best sketch to keep it inside its
-  strip as it responsively resizes */
-  @media (max-width: 399px) {
-    top: 60%;
-  }
-
-  @media (min-width: 375px) {
-    top:50%;
-  }
-
-  @media (min-width: 525px) {
-    top:40%;
-  }
-
-  @media (min-width: 768px) {
-    top:35%;
-  }
-
-  @media (min-width: 1200px) {
-    top: 2.5%;
-  }
 }
 
 div#container-build-your-scala-team {
@@ -189,15 +168,27 @@ div#button-learn-more {
   margin: 0 auto 0 auto;
 }
 
-/* Large */
+/* In large, sketch inside column is hidden & absolutely positioned sketch is
+shown instead to keep arm coming out of side of page in all views. */
 @media (min-width: 1199px) {
+  div#strip-build-your-scala-team {
+    /* Setup for absolute positioning for sketch-choose-the-best */
+    position: relative;
+  }
 
- div#container-build-your-scala-team {
-   /* Make container big enough for sketch */
-   padding: 30px 0 30px 0;
- }
+  div#container-build-your-scala-team {
+    /* Make container big enough for sketch */
+    padding: 30px 0 30px 0;
+    /* Change .container-fluid to .container */
+    width: 1170px;
+  }
 
- div#col-build-your-scala-team {
+  div#col-choose-the-best {
+    /* Force column to size of sketch */
+    height: 566px;
+  }
+
+  div#col-build-your-scala-team {
     text-align: right;
   }
 
