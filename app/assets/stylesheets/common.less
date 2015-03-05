@@ -24,7 +24,10 @@
 @s-mach-yellow-brightest: @s-mach-yellow + #202020;
 
 @s-mach-dkgrey: #393938;
+@s-mach-dkgrey-bright: @s-mach-dkgrey + #202020;
+@s-mach-dkgrey-brightest: @s-mach-dkgrey-bright + #202020;
 @s-mach-dkgrey-darker: @s-mach-dkgrey - #202020;
+@s-mach-dkgrey-darkest: @s-mach-dkgrey-darker - #202020;
 
 @offwhite: #f5f5f5;
 
@@ -42,173 +45,40 @@ body {
   background-color: white;
   /* Fixes weird artifact after nav-shadow */
   line-height: 1;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 200;
+  letter-spacing: 0.085em;
 }
 
 p {
+  font-size: 14pt;
   line-height: 1.5;
 }
 
 .anchor-focus-hover-active() {
   &:focus {
-    color: @s-mach-yellow;
-    /* Override bootstrap underline */
-    text-decoration: none;
-    /* Override bootstrap outline */
-    outline: none;
+    color: @s-mach-dkgrey;
   }
   &:hover {
-    color: @s-mach-yellow-bright;
-    /* Override bootstrap underline */
-    text-decoration: none;
+    color: @s-mach-dkgrey;
+  }
+  &:visited {
+    /* Make visited links brighter */
+    color: @s-mach-dkgrey-bright;
   }
   &:active {
-    color: @s-mach-yellow-brightest;
+    /* To make this visible on visited must be brighter */
+    color: @s-mach-dkgrey-brightest;
   }
 }
 
 a {
   /* Override bootstrap color */
   color: @s-mach-dkgrey;
-  /* Override bootstrap */
-  text-decoration: none;
-  &:visited {
-    /* Make visited links darker */
-    color: @s-mach-dkgrey-darker;
-  }
   .anchor-focus-hover-active();
-}
-
-
-div.strip-yellow {
-  /* Strips take up entire viewport width */
-  width: 100%;
-  /* Top/bottom spacing */
-  padding: 24px 0 24px 0;
-  background-color: @s-mach-yellow;
-  /* Hide overflow outside strips (certain images (e.g. clouds) extend beyond strip) */
-  overflow: hidden;
-}
-
-div.strip-white {
-  /* Strips take up entire viewport width */
-  width: 100%;
-  /* Top/bottom spacing */
-  padding: 24px 0 24px 0;
-  /* Hide overflow outside strips (certain images (e.g. clouds) extend beyond strip) */
-  overflow: hidden;
-}
-
-div.strip-offwhite {
-  /* Strips take up entire viewport width */
-  width: 100%;
-  /* Top/bottom spacing */
-  padding: 24px 0 24px 0;
-  background-color: @offwhite;
-  /* Hide overflow outside strips (certain images (e.g. clouds) extend beyond strip) */
-  overflow: hidden;
-}
-
-.cleaved-circle-button {
-  font-weight: 600;
-}
-
-div.strip-arrow-yellow-to-white {
-  background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-yellow_mvx8da.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 12px;
-}
-
-div.strip-arrow-yellow-to-offwhite {
-  background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-yellow_mvx8da.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: @offwhite;
-  height: 12px;
-}
-
-div.strip-arrow-white-to-yellow {
-  background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-white_acs9id.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: @s-mach-yellow;
-  height: 12px;
-}
-
-div.strip-arrow-white-to-offwhite {
-  background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-white_acs9id.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: @offwhite;
-  height: 12px;
-}
-
-div.strip-arrow-offwhite-to-white {
-  background-image: url(http://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-offwhite_flv8y6.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 12px;
-}
-
-p.title {
-  font-size: 20pt;
-  font-weight: 200;
-  letter-spacing: 0.085em;
-}
-
-img.divider {
-  padding: 10px 0 15px 0;
-}
-
-p.explain {
-  font-size: 14pt;
-  line-height: 1.5;
-}
-
-div.container {
-  /* Center in strip */
-  margin: 0 auto 0 auto;
-}
-
-img.sketch {
-  /* Center */
-  display: block;
-  margin: 0 auto 0 auto;
-}
-
-div.strip-text {
-  /* Center in strip */
-  margin: 0 auto 0 auto;
-  text-align: center;
-  max-width: 500px;
-}
-
-div.ribbon {
-  /* Center */
-  display: block;
-  margin: 0 auto 0 auto;
-
-  /* Allow ribbon text to be absolute positioned */
-  position: relative;
-  /* Force width to be always exactly image width (responsive doesn't look right at lower widths) */
-  width: 306px;
-}
-
-div.ribbon>img {
-  /* Scale ribbons to 290px when columns are stacked */
-  width: 290px;
-}
-
-div.ribbon>p {
-  font-size: 16pt;
-
-  /* Position ribbon text to appear in center of ribbon */
-  position: absolute;
-  text-align: center;
-  /* Note: should be 0 but it doesn't look quite centered otherwise */
-  left: -3px;
-  top: 11px;
-  width: 100%;
 }
 
 hr {
@@ -261,16 +131,171 @@ h4 {
   letter-spacing: 0.085em;
 }
 
-.strip-yellow h4 {
-  color: white;
+
+div.strip-yellow {
+  /* Strips take up entire viewport width */
+  width: 100%;
+  /* Top/bottom spacing */
+  padding: 24px 0 24px 0;
+  background-color: @s-mach-yellow;
+  /* Hide overflow outside strips (certain images (e.g. clouds) extend beyond strip) */
+  overflow: hidden;
+  h4 {
+    color: white;
+  }
 }
 
-.strip-white h4 {
-  color: @s-mach-yellow;
+div.strip-white {
+  /* Strips take up entire viewport width */
+  width: 100%;
+  /* Top/bottom spacing */
+  padding: 24px 0 24px 0;
+  /* Hide overflow outside strips (certain images (e.g. clouds) extend beyond strip) */
+  overflow: hidden;
+  h4 {
+    color: @s-mach-yellow;
+  }
 }
 
-.strip-offwhite h4 {
-  color: @s-mach-yellow;
+div.strip-offwhite {
+  /* Strips take up entire viewport width */
+  width: 100%;
+  /* Top/bottom spacing */
+  padding: 24px 0 24px 0;
+  background-color: @offwhite;
+  /* Hide overflow outside strips (certain images (e.g. clouds) extend beyond strip) */
+  overflow: hidden;
+  h4 {
+    color: @s-mach-yellow;
+  }
+}
+
+div.strip-arrow-yellow-to-white {
+  background-image: url(https://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-yellow_mvx8da.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 12px;
+}
+
+div.strip-arrow-yellow-to-offwhite {
+  background-image: url(https://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-yellow_mvx8da.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: @offwhite;
+  height: 12px;
+}
+
+div.strip-arrow-white-to-yellow {
+  background-image: url(https://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-white_acs9id.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: @s-mach-yellow;
+  height: 12px;
+}
+
+div.strip-arrow-white-to-offwhite {
+  background-image: url(https://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-white_acs9id.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: @offwhite;
+  height: 12px;
+}
+
+div.strip-arrow-offwhite-to-white {
+  background-image: url(https://res.cloudinary.com/s-mach/image/upload/v1424475927/arrow-offwhite_flv8y6.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 12px;
+}
+
+div.container {
+  /* Center in strip */
+  margin: 0 auto 0 auto;
+}
+
+img.sketch {
+  /* Center */
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+.strip-text {
+  /* Center in strip */
+  margin: 0 auto 0 auto;
+  max-width: 500px;
+
+ font-size: 14pt;
+  a:last-of-type {
+    font-weight: bold;
+    .cleaved-circle-button();
+  }
+}
+
+div.strip-text-left {
+  @media (min-width: 1200px) {
+    text-align: left;
+  }
+  .strip-text();
+}
+
+div.strip-text-right {
+  @media (min-width: 1200px) {
+    text-align: right;
+  }
+  .strip-text();
+}
+
+div.ribbon {
+  /* Center */
+  display: block;
+  margin: 0 auto 0 auto;
+
+  /* Allow ribbon text to be absolute positioned */
+  position: relative;
+  /* Force width to be always exactly image width (responsive doesn't look right at lower widths) */
+  width: 306px;
+}
+
+div.ribbon>img {
+  /* Scale ribbons to 290px when columns are stacked */
+  width: 290px;
+  @media (min-width: 768px) {
+    width: none;
+  }
+}
+
+div.ribbon>p {
+  font-size: 16pt;
+
+  /* Position ribbon text to appear in center of ribbon */
+  position: absolute;
+  text-align: center;
+  top: 11px;
+  width: 100%;
+  /* Note: should be 0 but it doesn't look quite centered otherwise */
+  left: -3px;
+}
+
+.cleaved-circle-button {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  border: none;
+  padding-top: 15px;
+  padding-right: 57px;
+  //  width: 50px;
+  height: 50px;
+
+  background-image: url(https://res.cloudinary.com/s-mach/image/upload/v1425568663/cleaved-circle-button-sprite_svjy6c.png);
+  background-repeat: no-repeat;
+
+  background-position: right top;
+  &:hover {
+    background-position: right center;
+  }
+  &:active {
+    background-position: right bottom;
+  }
 }
 
 /* VCenter columns in a bootstrap row when in lg */
@@ -329,11 +354,4 @@ h4 {
   }
 }
 
-@media (min-width: 768px) {
-  div.ribbon>img {
-    width: none;
-  }
-  div.ribbon.p {
-    left: 120px;
-  }
-}
+

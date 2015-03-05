@@ -17,29 +17,13 @@
             ...1LLLL...
 */
 
-/********************************* Common *************************************/
-
-p {
-  font-size: 14pt;
-  line-height: 1.5;
-}
+@import "common";
 
 /************************* Strip-Recruit-Train-Place **************************/
-
-div#container-recruit-train-place {
-  /* Center in strip */
-  margin: 0 auto 0 auto;
-}
 
 div#container-title {
   /* Spacing between title and sketches*/
   padding-bottom: 30px;
-  text-align: center;
-}
-
-p#summary-recruit-train-place {
-  text-align: center;
-  font-size: 18pt;
 }
 
 div#col-recruit {
@@ -104,32 +88,11 @@ img#sketch-train {
 
 /****************************** Strip-Why-Scala *******************************/
 
-div#container-why-scala {
-  /* Center in strip */
-  margin: 0 auto 0 auto;
-  text-align: center;
-}
-
-div#col-why-scala {
-  /* Keep width of column from growing to viewport width */
-  max-width: 390px;
-  /* HCenter */
-  margin: 0 auto 0 auto;
-}
-
-img#sketch-why-scala {
-  /* HCenter */
-  margin: 0 auto 0 auto;
-}
-
 /* Large */
 @media (min-width: 1199px) {
 
   div#strip-why-scala {
     padding: 100px 0 100px 0;
-  }
-  div#container-why-scala {
-    text-align: left;
   }
 }
 
@@ -147,25 +110,6 @@ img#sketch-choose-the-best-lg {
   top: 15px;
   left: 0;
   padding-right: 20px;
-}
-
-div#container-build-your-scala-team {
-  /* HCenter in strip */
-  margin: 0 auto 0 auto;
-  /* Start with text aligned center for XS */
-  text-align: center;
-}
-
-div#col-build-your-scala-team {
-  /* Keep width of column from growing to viewport width */
-  max-width: 390px;
-  /* HCenter */
-  margin: 0 auto 0 auto;
-}
-
-div#button-learn-more {
-  /* HCenter */
-  margin: 0 auto 0 auto;
 }
 
 /* In large, sketch inside column is hidden & absolutely positioned sketch is

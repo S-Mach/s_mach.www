@@ -25,6 +25,23 @@ div#footer {
   text-align: center;
   background-color: @dkgreybg;
   color: @dkgreybg-text-darker;
+  a {
+    &:focus {
+      color: @s-mach-yellow;
+      /* Override bootstrap underline */
+      text-decoration: none;
+      /* Override bootstrap outline */
+      outline: none;
+    }
+    &:hover {
+      color: @s-mach-yellow-bright;
+      /* Override bootstrap underline */
+      text-decoration: none;
+    }
+    &:active {
+      color: @s-mach-yellow-brightest;
+    }
+  }
 }
 
 img#footer-logo {

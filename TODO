@@ -6,6 +6,7 @@ Footer
 ---
 * Make footer-to-top image into button
 * [MVP] Add design credit for Mark to footer
+* Increase font size
 
 Navbar
 ---
@@ -17,7 +18,6 @@ Navbar
 
 Home
 ---
-* [MVP] Use tutorial here to make proper cleaved-circle-button CSS: http://line25.com/tutorials/how-to-build-a-simple-button-with-css-image-sprites
 * [MVP] Work on content
 * In strip-recruit-train-place: make [sm,md] smaller/tighter instead of single
 column stack
