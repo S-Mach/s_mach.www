@@ -13,6 +13,7 @@ Navbar
 * Setting height: 10px on nav-shadow in sm to correct skew causes artifact
 * In xs (320px), make logo vcenter somehow
 * Replace navbar images with glyphs
+* Link tab order
 
 Home
 ---
