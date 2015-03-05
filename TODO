@@ -1,6 +1,7 @@
 Common
 ---
 * Standardize bottom/top margin/padding/border to px, left/right to %
+* [MVP] On mobile chrome, there is a visible 1px artifact between strips (sometimes?)
 
 Footer
 ---
@@ -23,11 +24,13 @@ Home
 column stack
 * Collapse recruit-train-place to carousel instead of stacking
 * Investigate weird artifact where height of strip-build-your-scala-team jumps by 50px between sm -> md transition. choose-the-best-blank.png resizes from 548 to 598 for no reason?
+* [MVP] On mobile, ribbons are not centered. Train image is too large.
 
 How's it work?
 ---
 * [MVP] Add clouds to hows-it-work[we-mentor-train-certify,you-interview-them] (using same technique from recruit-train-place)
 * Collapse mentor-train-certify to carousel instead of stacking
+* [MVP] On mobile, ribbons are not centered
 
 About Us
 ---
