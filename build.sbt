@@ -23,3 +23,10 @@ libraryDependencies ++= Seq(
 
 // Only compile one less file
 includeFilter in (Assets, LessKeys.less) := "main.less"
+
+// Ensure re-written relative urls in less start with ../
+LessKeys.rootpath in Assets := "../"
+
+// Fix font-face urls (for bootstrap glyphicons from "../font/glyphicons..." to "../lib/bootstrap/fonts/glyphicons...")
+LessKeys.relativeUrls in Assets := true
+

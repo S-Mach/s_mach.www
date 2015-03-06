@@ -25,8 +25,7 @@ GET     /                           controllers.Application.index()
 GET     /hows-it-work               controllers.Application.howsItWork()
 
 # Map static resources
-GET     /css/*file                  controllers.Css.at(file)
-GET     /fonts/*file                controllers.Fonts.at(file)
-GET     /favicons/*file             controllers.Favicons.at(file)
-# GET     /text/*id                   controllers.Text.renderHtml(id)
-# GET     /asset/*file                controllers.Assets.at(path="/public",file)
+GET     /css/*file                  controllers.Assets.at(path="/public/css",file)
+GET     /js/*file                   controllers.Assets.at(path="/public/js",file)
+GET     /favicons/*file             controllers.Assets.at(path="/public/images/favicons",file)
+GET     /lib/*file                  controllers.Assets.at(path="/public/lib",file)
