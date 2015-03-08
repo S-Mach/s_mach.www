@@ -19,23 +19,26 @@
 package controllers
 
 import play.api.mvc.{Action, Controller}
-import service.impl.{CDNServiceImpl, TextServiceImpl}
 import util.Components
+import s_mach.concurrent._
 
 object Application extends Controller {
-  implicit val components = new Components {
-    override implicit val executionContext =
-      play.api.libs.concurrent.Execution.Implicits.defaultContext
+  implicit val components = Components().get
+  import components._
 
-    override val textService = new TextServiceImpl
-    override val cdnService = new CDNServiceImpl
+  def index = Action.async {
+    for {
+      input <- views.Home.Input.fetch(components)
+    } yield {
+      Ok(views.html.home()(input))
+    }
   }
 
-  def index = Action {
-    Ok(views.html.home())
-  }
-
-  def howsItWork = Action {
-    Ok(views.html.howsItWork())
+  def howsItWork = Action.async {
+    for {
+      input <- views.HowsItWork.Input.fetch(components)
+    } yield {
+      Ok(views.html.howsItWork()(input))
+    }
   }
 }

@@ -18,6 +18,16 @@
 */
 package service
 
+import scala.concurrent.Future
+
 trait CDNService {
-  def urlFor(assetName: String) : Option[String]
+  def urlFor(assetName: String) : Future[Option[String]]
+  // TODO:
+//  def urlsFor(assetNames: Seq[String]) : Future[Seq[(String,String)]]
+}
+
+object CDNService {
+  trait Component {
+    implicit val cdnService: CDNService
+  }
 }

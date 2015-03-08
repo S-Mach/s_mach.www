@@ -20,30 +20,39 @@ package util
 
 import play.twirl.api.Html
 import service.TextService
-import s_mach.concurrent._
 
-class TextAsset(path: String = "") {
-  // Note: object class names end in $ by default
-  val name: String = {
-    s"$path/${
-      this.getClass.getSimpleName
-        .dropRight(1)
-        .camelToHyphenCase
-    }"
-  }
-  def txt(implicit textService:TextService): Html = {
-    Html(textService.renderText(
-      textService.find(name).get.getOrDie(
-        s"Failed to find URL for asset $name!"
-      )
-    ).get)
-  }
+import scala.concurrent.{ExecutionContext, Future}
 
-  def html(implicit textService:TextService): Html = {
-    Html(textService.renderHtmlFragment(
-      textService.find(name).get.getOrDie(
-        s"Failed to find URL for asset $name!"
-      )
-    ).get)
+case class HtmlAsset(id: String, html: Html)
+
+object HtmlAsset {
+  def apply(
+    id: String
+  )(implicit
+    execution:ExecutionContext,
+    textService:TextService
+  ) : Future[HtmlAsset] = {
+    val hyphenCase = id.camelToHyphenCase
+    for {
+      token <- textService.find(hyphenCase).getOrDie(s"Html asset $hyphenCase not found!")
+      html <- textService.renderHtmlFragment(token)
+    } yield HtmlAsset(id,Html(html))
+  }
+}
+
+case class TextAsset(id: String, txt: String)
+
+object TextAsset {
+  def apply(
+    id: String
+  )(implicit
+    execution:ExecutionContext,
+    textService:TextService
+  ) : Future[TextAsset] = {
+    val hyphenCase = id.camelToHyphenCase
+    for {
+      token <- textService.find(hyphenCase).getOrDie(s"Text asset $hyphenCase not found!")
+      html <- textService.renderText(token)
+    } yield TextAsset(id,html)
   }
 }

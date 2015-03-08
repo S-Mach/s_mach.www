@@ -30,3 +30,10 @@ trait TextService {
   def renderText(token: Token) : Future[String]
 }
 
+object TextService {
+  trait Component {
+    implicit val textService: TextService
+  }
+}
+
+

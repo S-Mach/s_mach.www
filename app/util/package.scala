@@ -20,10 +20,17 @@ import com.typesafe.config.Config
 import scala.collection.JavaConverters._
 import s_mach.string._
 
+import scala.concurrent.{ExecutionContext, Future}
+
 package object util {
   implicit class PimpMyOption[A](val self: Option[A]) extends AnyVal {
     def getOrDie(error: String) : A =
       self.getOrElse(throw new RuntimeException(error))
+  }
+
+  implicit class PimpMyFutureOption[A](val self: Future[Option[A]]) extends AnyVal {
+    def getOrDie(error: String)(implicit ec:ExecutionContext) : Future[A] =
+      self.map(_.getOrElse(throw new RuntimeException(error)))
   }
 
   implicit class PimpMyConfig(val self: Config) extends AnyVal {
@@ -46,4 +53,12 @@ package object util {
         .mkString("-")
     }
   }
+
+//  implicit class PimpMyFetchFunction[W,I](val self:(W => Future[I])) extends AnyVal {
+//    def andCompute[O](f: O => Future[O]) : AsyncFunction[W,O] = new AsyncFunction[W,O] {
+//      override type Input = I
+//      override def fetchInput(world: W) = self(world)
+//      override def compute(input: Input) = f(input)
+//    }
+//  }
 }

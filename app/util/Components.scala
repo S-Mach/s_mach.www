@@ -18,12 +18,31 @@
 */
 package util
 
+import service.impl.{CDNServiceImpl, TextServiceImpl}
 import service.{CDNService, TextService}
+import scala.concurrent.{Future, ExecutionContext}
+import s_mach.concurrent._
 
-import scala.concurrent.ExecutionContext
+trait Components extends
+  ExecutionContextComponent with
+  TextService.Component with
+  CDNService.Component {
+  implicit val executionContext: ExecutionContext
+  // Note: this must be a val since it uses a path-dependent type
+  implicit val textService : TextService
+  implicit val cdnService: CDNService
+}
 
-trait Components {
-  implicit def executionContext: ExecutionContext
-  implicit def textService : TextService
-  implicit def cdnService: CDNService
+object Components {
+  def apply() : Future[Components] = {
+    implicit val _executionContext = play.api.libs.concurrent.Execution.Implicits.defaultContext
+    val _textService = new TextServiceImpl
+    val _cdnService = new CDNServiceImpl
+    
+    new Components {
+      override val executionContext = _executionContext
+      override val cdnService = _cdnService
+      override val textService = _textService
+    }.future
+  }
 }

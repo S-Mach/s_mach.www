@@ -92,6 +92,7 @@ class TextServiceImpl extends TextService {
       case Html =>
           Source.fromURL(url).mkString
       case Asciidoc =>
+        import scala.language.postfixOps
         import sys.process._
         url #> "asciidoc --backend=wordpress -" !!
       case PlainText =>

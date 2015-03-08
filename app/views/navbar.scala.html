@@ -17,12 +17,11 @@
             ...1LLLL...
 **@
 
-@import models.Nav
 @import util._
-@import assets._
+@import views._
 
-@(active: String)(implicit components: Components)
-@import components._
+@(active: String)(implicit input:Navbar.Input)
+@import input._
 
 <!-- Based on http://jsfiddle.net/4Cc3p/1/ (http://stackoverflow.com/questions/18821238/multiple-collapse-buttons-in-navbar-with-bootstrap-3-0) -->
 <nav class="navbar" role="navigation">
@@ -49,30 +48,26 @@
   <ul id="navbar-social" class="navbar-item collapse navbar-collapse nav navbar-nav">
     <li class="navbar-separator hidden-xs"></li>
     <li>
-      <a href="mailto:@text.navbar.Email.txt">
+      <a href="mailto:@text.Email.txt">
         <img id="navbar-social-icon-email" class="img-responsive" src="@images.EmailIcon.url"/>
         <span class="sr-only">Email</span>
       </a>
     </li>
     <li>
-      <a href="Tel:@text.navbar.Phone.txt">
+      <a href="Tel:@text.Phone.txt">
         <img id="navbar-social-icon-phone" class="img-responsive" src="@images.TelephoneIcon.url"/>
         <span class="sr-only">Telephone</span>
       </a>
     </li>
     <li>
-      <a href="@text.navbar.Github.txt">
+      <a href="@text.Github.txt">
         <img id="navbar-social-icon-github"class="img-responsive" src="@images.GithubIcon.url"/>
         <span class="sr-only">Github</span>
       </a>
     </li>
   </ul>
   <ul id="navbar-links" class="navbar-item collapse navbar-collapse nav navbar-nav">
-    @for((title,url) <- Nav.links.filterNot(_._1 == "Home")) {
-      <li>
-        <a href="@url">@title</a>
-      </li>
-    }
+    @text.navlinks.html
   </ul>
 </nav>
 <img id="strip-nav-shadow" class="strip-yellow" src="@images.NavShadow.url"/>

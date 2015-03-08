@@ -17,21 +17,19 @@
             ...1LLLL...
 **@
 
-@import models.Nav
 @import util._
-@import assets._
+@import views._
 
-@()(implicit components: Components)
-@import components._
+@()(implicit input: Footer.Input)
+@import input._
 
 <div id="footer">
   <img id="footer-logo" src="@images.S_MachGearLogo.url"/>
   <div>
-    <div id="footer-links">
-      @for((title,url) <- Nav.links) {
-        <a href="@url">@title</a>
-      }
-    </div>
+    <ul id="footer-links" class="list-inline">
+      <li><a href="/">Home</a></li>
+      @text.navlinks.html
+    </ul>
     <p id="footer-copyright">Copyright &copy;2015, S-Mach, Inc. All rights reserved.</p>
   </div>
   <a id="footer-button-to-top" href="#">

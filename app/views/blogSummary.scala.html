@@ -18,10 +18,10 @@
 **@
 
 @import util._
-@import assets._
+@import views._
 
-@()(implicit components: Components)
-@import components._
+@()(implicit input: BlogSummary.Input)
+@import input._
 <div id="strip-blog" class="strip-offwhite">
   <div>
     @text.BlogSummary.html

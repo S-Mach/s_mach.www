@@ -2,6 +2,20 @@ name := "s-mach.www"
 
 scalaVersion := "2.11.5"
 
+// Scala Compiler Options
+scalacOptions in ThisBuild ++= Seq(
+  "-target:jvm-1.7",
+  "-encoding", "UTF-8",
+  "-deprecation", // warning and location for usages of deprecated APIs
+  "-feature", // warning and location for usages of features that should be imported explicitly
+  "-unchecked", // additional warnings where generated code depends on assumptions
+  "-Xlint", // recommended additional warnings
+  "-Ywarn-adapted-args", // Warn if an argument list is modified to match the receiver
+  "-Ywarn-value-discard", // Warn when non-Unit expression results are unused
+  "-Ywarn-inaccessible",
+  "-Ywarn-dead-code"
+)
+
 version := "1.0.0-SNAPSHOT"
 
 // Note: required to resolve scalaz-streams (transitive for Specs2)

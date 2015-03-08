@@ -16,15 +16,11 @@
           .L1 1tt1ttt,,Li
             ...1LLLL...
 */
-package assets.text
+package util
 
-import util.TextAsset
+import scala.concurrent.ExecutionContext
 
-package object howsItWork {
-  object WeLearn extends TextAsset("/howsItWork")
-  object WeBuild extends TextAsset("/howsItWork")
-  object WeRecruit extends TextAsset("/howsItWork")
-  object WeMentorTrainCertify extends TextAsset("/howsItWork")
-  object YouInterviewThem extends TextAsset("/howsItWork")
-  object WePlace extends TextAsset("/howsItWork")
+trait ExecutionContextComponent {
+  implicit val executionContext:ExecutionContext
 }
+

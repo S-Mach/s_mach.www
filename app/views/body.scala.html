@@ -1,7 +1,9 @@
 @import util._
+@import views._
 @import controllers._
 
-@(active: String)(content: Html)(implicit components: Components)
+@(active: String)(content: Html)(implicit input: Body.Input)
+@import input._
 <!DOCTYPE html>
 <html lang="en">
 @**

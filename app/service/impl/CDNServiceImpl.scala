@@ -22,12 +22,17 @@ import play.api.Play
 import service.CDNService
 import util._
 
+import scala.concurrent.Future
+
 class CDNServiceImpl extends CDNService {
   val configKey = "cdn.name-to-url"
   val assetNameToUrl = {
     Play.current.configuration.underlying.getStringMap(configKey)
   }
 
-  override def urlFor(assetName: String): Option[String] =
-    assetNameToUrl.get(assetName)
+  override def urlFor(assetName: String): Future[Option[String]] =
+    Future.successful(assetNameToUrl.get(assetName))
+
+  // TODO:
+//  override def urlsFor(assetNames: Seq[String]): Future[Seq[(String, String)]] = ???
 }

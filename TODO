@@ -16,6 +16,7 @@ Navbar
 * In xs (320px), make logo vcenter somehow
 * Replace navbar images with glyphs
 * Link tab order
+* Weird artifact where clicking on logo causes it to jump right
 
 Home
 ---

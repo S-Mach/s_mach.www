@@ -16,19 +16,18 @@
           .L1 1tt1ttt,,Li
             ...1LLLL...
 **@
-
 @import util._
-@import assets._
-
-@()(implicit components: Components)
-@import components._
+@import views._
+    
+@()(implicit input: Home.Input)
+@import input._
 @body("Home") {
 
 <div id="strip-recruit-train-place" class="strip-yellow">
   <div id="container-recruit-train-place" class="container">
     <div id="container-title" class="row">
       <div class="col-lg-12">
-        @text.home.SiteTitle.html
+        @text.SiteTitle.html
       </div>
     </div>
     <div class="row">
@@ -64,7 +63,7 @@
   <div class="container">
     <div class="row vcenter-lg">
       <div class="col-lg-5 strip-text-left">
-        @text.home.WhyScala.html
+        @text.WhyScala.html
       </div>
       <div class="col-lg-7">
         <img class="img-responsive sketch" src="@images.WhyScala.url"/>
@@ -77,7 +76,7 @@
   <div id="container-build-your-scala-team" class="container-fluid">
     <div class="row vcenter-lg">
       <div class="col-lg-4 col-lg-push-8 strip-text-right">
-        @text.home.BuildYourScalaTeam.html
+        @text.BuildYourScalaTeam.html
       </div>
       <div id="col-choose-the-best" class="col-lg-8 col-lg-pull-4">
         <img id="sketch-choose-the-best" class="img-responsive hidden-lg sketch" src="@images.ChooseTheBest.url"/>
