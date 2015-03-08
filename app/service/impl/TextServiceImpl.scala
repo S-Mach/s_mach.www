@@ -49,7 +49,6 @@ class TextServiceImpl extends TextService {
       case PlainText => "txt"
     }
     def find(fileName: String, textType: TextTypeEnum) : Option[Token] = {
-      println(s"fileName=$fileName")
       resourceNameAt("/public/text",fileName)
         .collect {
           case resourceName
