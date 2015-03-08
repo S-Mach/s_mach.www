@@ -29,7 +29,7 @@ object Footer {
           CDNAsset('S_MachGearLogo),
           CDNAsset('ButtonToTop)
         ).map((Images.apply _).tupled),
-        HtmlAsset("navlinks").map(Text.apply)
+        HtmlAsset("/",'navlinks).map(Text.apply)
       ).map((Input.apply _).tupled)
     }
   }

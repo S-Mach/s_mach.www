@@ -23,36 +23,54 @@ import service.TextService
 
 import scala.concurrent.{ExecutionContext, Future}
 
-case class HtmlAsset(id: String, html: Html)
+case class HtmlAsset(path: String, id: String, html: Html)
 
 object HtmlAsset {
   def apply(
+    path: String,
+    id: Symbol
+  )(implicit
+    execution:ExecutionContext,
+    textService:TextService
+  ) : Future[HtmlAsset] =
+    apply(path, id.name.camelToHyphenCase)
+
+  def apply(
+    path: String,
     id: String
   )(implicit
     execution:ExecutionContext,
     textService:TextService
   ) : Future[HtmlAsset] = {
-    val hyphenCase = id.camelToHyphenCase
     for {
-      token <- textService.find(hyphenCase).getOrDie(s"Html asset $hyphenCase not found!")
+      token <- textService.find(path,id).getOrDie(s"Html asset $path/$id not found!")
       html <- textService.renderHtmlFragment(token)
-    } yield HtmlAsset(id,Html(html))
+    } yield HtmlAsset(path,id,Html(html))
   }
 }
 
-case class TextAsset(id: String, txt: String)
+case class TextAsset(path: String, id: String, txt: String)
 
 object TextAsset {
   def apply(
+    path: String,
+    id: Symbol
+  )(implicit
+    execution:ExecutionContext,
+    textService:TextService
+  ) : Future[TextAsset] =
+    apply(path, id.name.camelToHyphenCase)
+
+  def apply(
+    path: String,
     id: String
   )(implicit
     execution:ExecutionContext,
     textService:TextService
   ) : Future[TextAsset] = {
-    val hyphenCase = id.camelToHyphenCase
     for {
-      token <- textService.find(hyphenCase).getOrDie(s"Text asset $hyphenCase not found!")
+      token <- textService.find(path,id).getOrDie(s"Text asset $path/$id not found!")
       html <- textService.renderText(token)
-    } yield TextAsset(id,html)
+    } yield TextAsset(path,id,html)
   }
 }

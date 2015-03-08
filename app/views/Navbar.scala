@@ -39,10 +39,10 @@ object Navbar {
           CDNAsset('NavShadow)
         ).map((Images.apply _).tupled),
         async.par.run(
-          TextAsset("navbar/Phone"),
-          TextAsset("navbar/Email"),
-          TextAsset("navbar/Github"),
-          HtmlAsset("navlinks")
+          TextAsset("/navbar",'Phone),
+          TextAsset("/navbar",'Email),
+          TextAsset("/navbar",'Github),
+          HtmlAsset("/",'navlinks)
         ).map((Text.apply _).tupled)
       ).map((Input.apply _).tupled)
     }

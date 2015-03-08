@@ -37,7 +37,7 @@ object Customers {
           CDNAsset('CustomerExample5),
           CDNAsset('CustomerExample6)
         ).map((Images.apply _).tupled),
-        HtmlAsset("Customers").map(Text.apply)
+        HtmlAsset("/",'Customers).map(Text.apply)
       ).map((Input.apply _).tupled)
     }
   }

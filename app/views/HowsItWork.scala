@@ -55,12 +55,12 @@ object HowsItWork {
           CDNAsset('WePlace)
         ).map((Images.apply _).tupled),
         async.par.run(
-          HtmlAsset("howsItWork/WeLearn"),
-          HtmlAsset("howsItWork/WeBuild"),
-          HtmlAsset("howsItWork/WeRecruit"),
-          HtmlAsset("howsItWork/WeMentorTrainCertify"),
-          HtmlAsset("howsItWork/YouInterviewThem"),
-          HtmlAsset("howsItWork/WePlace")
+          HtmlAsset("/hows-it-work",'WeLearn),
+          HtmlAsset("/hows-it-work",'WeBuild),
+          HtmlAsset("/hows-it-work",'WeRecruit),
+          HtmlAsset("/hows-it-work",'WeMentorTrainCertify),
+          HtmlAsset("/hows-it-work",'YouInterviewThem),
+          HtmlAsset("/hows-it-work",'WePlace)
         ).map((Text.apply _).tupled),
         Body.Input.fetch(components),
         Customers.Input.fetch(components)

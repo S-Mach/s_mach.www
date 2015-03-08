@@ -31,7 +31,7 @@ object BlogSummary {
           CDNAsset('BlogExample2),
           CDNAsset('BlogExample3)
         ).map((Images.apply _).tupled),
-        HtmlAsset("BlogSummary").map(Text.apply)
+        HtmlAsset("/",'BlogSummary).map(Text.apply)
       ).map((Input.apply _).tupled)
     }
   }

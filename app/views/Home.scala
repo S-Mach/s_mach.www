@@ -71,9 +71,9 @@ object Home {
           CDNAsset('ButtonToTop)
         ).map((Images.apply _).tupled),
         async.par.run(
-          HtmlAsset("home/SiteTitle"),
-          HtmlAsset("home/WhyScala"),
-          HtmlAsset("home/BuildYourScalaTeam")
+          HtmlAsset("/home",'SiteTitle),
+          HtmlAsset("/home",'WhyScala),
+          HtmlAsset("/home",'BuildYourScalaTeam)
         ).map((Text.apply _).tupled),
         Body.Input.fetch(components),
         BlogSummary.Input.fetch(components),

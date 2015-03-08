@@ -42,13 +42,14 @@ class TextServiceImpl extends TextService {
     )
   }
 
-  override def find(id: String): Future[Option[Token]] = Future.successful {
+  override def find(path: String, id: String): Future[Option[Token]] = Future.successful {
     def extFor(textType: TextTypeEnum) : String = textType match {
-      case Html => ".html"
-      case Asciidoc => ".asciidoc"
-      case PlainText => ".txt"
+      case Html => "html"
+      case Asciidoc => "asciidoc"
+      case PlainText => "txt"
     }
     def find(fileName: String, textType: TextTypeEnum) : Option[Token] = {
+      println(s"fileName=$fileName")
       resourceNameAt("/public/text",fileName)
         .collect {
           case resourceName
@@ -61,7 +62,7 @@ class TextServiceImpl extends TextService {
     // TODO: extensions
     textTypes
       .iterator
-      .map(t => find(id + extFor(t), t))
+      .map(t => find(s"$path/$id.${extFor(t)}", t))
       .collectFirst {
         case Some(token) => token
       }
